@@ -1,0 +1,4 @@
+RewriteEngine on 
+RewriteCond %{HTTP_HOST} ^kasvumaja-c9-johnjoal.c9.io$ [NC,OR] 
+RewriteCond %{REQUEST_URI} !public/ 
+RewriteRule (.*) /laravel/public/$1 [L]
