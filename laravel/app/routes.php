@@ -18,3 +18,27 @@ Route::get('/', function()
 
 Route::resource('products', 'ProductController');
 //Route::controller('products', 'ProductController');
+
+Route::controller('admin', 'AdminController');
+Route::get('/admin', array('before' => 'auth' ,function()
+{
+    return View::make('admin/index');
+}));
+
+Route::get('/login', function()
+{
+    return View::make('login');
+});
+Route::post('/login', function()
+{
+    // Validation? Not in my quickstart!
+    // No, but really, I'm a bad person for leaving that out
+    Auth::attempt( array('email' => Input::get('email'), 'password' => Input::get('password')) );
+
+    return Redirect::to('/');
+});
+Route::get('/logout', function()
+{
+    Auth::logout();
+    return Redirect::to('/');
+});
