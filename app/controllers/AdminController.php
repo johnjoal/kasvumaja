@@ -15,6 +15,8 @@ class AdminController extends BaseController {
 	|
 	*/
 
+    protected $layout = 'layouts.admin';
+
 	public function getIndex()
 	{
 		return View::make('admin/index');
@@ -23,5 +25,15 @@ class AdminController extends BaseController {
 	public function getFirstPage()
 	{
 		return View::make('admin/first-page');
+	}
+	
+	public function getCreateProduct()
+	{
+	    $product = new Product;
+	    $this->layout->content = View::make('admin.create-product')->with('product', $product);;
+	}
+	public function postCreateProduct()
+	{
+	    $this->layout->content = View::make('admin.create-product');
 	}
 }

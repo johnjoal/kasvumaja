@@ -16,7 +16,8 @@ class CreateProductsTable extends Migration {
 		{
 			$table->increments('id');
             $table->string('title');
-            $table->text('text');
+            $table->longText('content');
+            $table->string('lang', 2);
             $table->timestamps();
 		});
 	}

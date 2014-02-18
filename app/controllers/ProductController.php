@@ -4,7 +4,7 @@ class ProductController extends BaseController {
 
 	/*
 	|--------------------------------------------------------------------------
-	| Default Home Controller
+	| Product Controller
 	|--------------------------------------------------------------------------
 	|
 	| You may wish to use controllers instead of, or in addition to, Closure
@@ -14,6 +14,8 @@ class ProductController extends BaseController {
 	|	Route::get('/', 'HomeController@showWelcome');
 	|
 	*/
+	
+	protected $layout = 'layouts.master';
 
 	public function index()
 	{
@@ -22,6 +24,7 @@ class ProductController extends BaseController {
     
     public function create()
 	{
-		return View::make('products/create');
+	    $this->layout->content = View::make('products.create');
+		//return View::make('products/create');
 	}
 }

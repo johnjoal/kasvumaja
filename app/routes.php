@@ -42,3 +42,7 @@ Route::get('/logout', function()
     Auth::logout();
     return Redirect::to('/');
 });
+
+/*** admin ***/
+Route::get('admin/create-product/{product}', array('uses' => 'AdminController@getCreateProduct', 'as' => 'admin.create-product'));
+/*** end admin ***/

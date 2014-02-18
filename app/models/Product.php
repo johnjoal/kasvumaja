@@ -16,7 +16,7 @@ class Product extends Eloquent {
 	 */
 	//protected $hidden = array('');
 	
-	protected $fillable = array('email', 'password');
+	protected $fillable = array('title', 'content', 'lang');
 
 	/**
 	 * Get the unique identifier for the product.
