@@ -14,7 +14,7 @@ class Product extends Eloquent {
 	 *
 	 * @var array
 	 */
-	protected $hidden = array('password');
+	//protected $hidden = array('');
 	
 	protected $fillable = array('email', 'password');
 
