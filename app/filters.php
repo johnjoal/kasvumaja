@@ -38,7 +38,7 @@ Route::filter('auth', function()
 	if (Auth::guest()) return Redirect::to('login');
 });
 
-Route::when('admin/*', 'auth');
+//Route::when('admin/*', 'auth');
 
 Route::filter('auth.basic', function()
 {

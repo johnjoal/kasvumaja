@@ -1,13 +1,13 @@
 <?php
 
-class Product extends Eloquent {
-
+class Page extends Eloquent {
+    
 	/**
 	 * The database table used by the model.
 	 *
 	 * @var string
 	 */
-	protected $table = 'products';
+	protected $table = 'pages';
 
 	/**
 	 * The attributes excluded from the model's JSON form.
@@ -15,18 +15,18 @@ class Product extends Eloquent {
 	 * @var array
 	 */
 	//protected $hidden = array('');
-	
-	protected $fillable = array('title', 'content', 'lang');
+	protected $guarded = array('id');
+	protected $fillable = array('title', 'content', 'lang', 'type');
 
 	/**
 	 * Get the unique identifier for the product.
 	 *
 	 * @return mixed
 	 */
-	public function getId()
+	/*public function getId()
 	{
 		return $this->getKey();
-	}
+	}*/
 
 	/**
 	 * Get the password for the user.

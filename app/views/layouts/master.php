@@ -21,7 +21,7 @@
   <body>
   <div class="container">
       <?php echo HTML::image('img/kasvumaja_logo.gif', 'Kasvumaja', array('id' => 'logo')) ?>
-      <?php echo HTML::image('img/tomat.jpg', 'Kasvumaja', array('class' => 'absolute right')) ?>
+      <?php echo HTML::image('img/tomat.jpg', 'Kasvumaja', array('class' => 'pull-right')) ?>
   </div>
 
     <!-- Fixed navbar -->

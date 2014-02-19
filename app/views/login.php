@@ -1,20 +1,17 @@
-  <div class="container">
- 
-      <form class="form-signin form-horizontal" method="post" action="/login">
-        <h2 class="">Please sign in</h2>
-        <div class="control-group ">
-          <label class="control-label" for="email">Email:</label>
-          <div class="controls">
-            <input type="text" id="email" name="email" placeholder="Email address" value="">
-          </div>
+<div class="center-block" style="width:400px; margin-top:50px">
+    <form class="form-horizontal" role="form" method="post" action="/login">
+        <div class="form-group">
+            <label for="email" class="col-sm-3 control-label">Email</label>
+            <div class="col-sm-8"><input type="email" class="form-control" id="email" name="email" placeholder="Enter email"></div>
         </div>
-        <div class="control-group ">
-            <label class="control-label" for="password">Password:</label>
-            <div class="controls">
-              <input type="password" id="password" name="password" placeholder="Password" value="">
+        <div class="form-group">
+            <label for="password" class="col-sm-3 control-label">Password</label>
+            <div class="col-sm-8">
+                <p><input type="password" class="form-control" id="password" name="password" placeholder="Password"></p>
+                <div class="pull-right">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
             </div>
         </div>
-        <button class="btn btn-large btn-primary" type="submit">Sign in</button>
-      </form>
-      
-</div> <!-- /container -->
+    </form>
+</div>

@@ -1,3 +1,9 @@
+<?php
+    function get_nav_active($compare) {
+        if (Request::is($compare))
+            return 'class="active"';
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -22,8 +28,8 @@
   </head>
   <body>
   <div class="container">
-      <?php echo HTML::image('img/kasvumaja_logo.gif', 'Kasvumaja', array('id' => 'logo')) ?>
-      <?php echo HTML::image('img/tomat.jpg', 'Kasvumaja', array('class' => 'absolute right')) ?>
+      <?php //echo HTML::image('img/kasvumaja_logo.gif', 'Kasvumaja', array('id' => 'logo')) ?>
+      <?php //echo HTML::image('img/tomat.jpg', 'Kasvumaja', array('class' => 'pull-right')) ?>
   </div>
 
     <!-- Fixed navbar -->
@@ -31,17 +37,34 @@
       <div class="container">
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="/products/create">ДОБАВИТЬ ТЕПЛИЦУ</a></li>
-            <li><a href="#shoes">ОБУВЬ</a></li>
-            <li><a href="#other">ПРОЧИЕ ТОВАРЫ</a></li>
-            <li><a href="#compains">АКЦИИ</a></li>
-            <li><a href="#contact">КОНТАКТ</a></li>
+            <li <?php echo get_nav_active('admin') ?>><a href="/admin">ГЛАВНАЯ</a></li>
+            <li <?php echo get_nav_active('admin/products') ?>><a href="/admin/products">ТЕПЛИЦЫ</a></li>
+            <li <?php echo get_nav_active('admin/shoes') ?>><a href="/admin/shoes">ОБУВЬ</a></li>
+            <li <?php echo get_nav_active('admin/other') ?>><a href="/admin/other">ПРОЧИЕ ТОВАРЫ</a></li>
+            <li <?php echo get_nav_active('admin/promo') ?>><a href="/admin/promo">АКЦИИ</a></li>
+            <li <?php echo get_nav_active('admin/contact') ?>><a href="/admin/contact">КОНТАКТ</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>
     
     <div class="container">
+        <?php if(Session::has('success')) { ?>
+            <div class="bs-callout bs-callout-success">
+                <h4>
+                    <?php echo Session::get('success') ?>
+                </h4>
+            </div>
+        <?php } ?>
+        
+        <?php if(Session::has('error')) { ?>
+            <div class="bs-callout bs-callout-error">
+                <h4>
+                    <?php echo Session::get('error') ?>
+                </h4>
+            </div>
+        <?php } ?>
+        
         <?php echo $content; ?>
     </div>
 
