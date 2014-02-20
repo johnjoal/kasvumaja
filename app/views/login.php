@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Admin area</title>
+	<title>Kasvumaja :: Admin</title>
 	<?php echo HTML::style('css/bootstrap.min.css'); ?>
 </head>
 <body>

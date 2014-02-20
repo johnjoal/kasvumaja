@@ -19,23 +19,40 @@ class PageController extends BaseController {
 
 	public function getIndex()
 	{
-		return View::make('pages.index');
-	}
-    
-    public function getProducts()
-	{
 	    $data = array(
+	        'page' => Page::where('type', PageType::HOME)
+	            ->where('lang', App::getLocale())
+	            ->first(),
 	        'products' => Page::where('type', PageType::GREENHOUSE)
 	            ->where('lang', App::getLocale())
 	            ->get()
 	        );
-		$this->layout->content = View::make('pages.list')
-		    ->with('data', $data);
+		$this->layout->content = View::make('pages.index')->with('data', $data);;
+	}
+    
+    public function getProducts()
+	{
+	    $this->generate_list_layout(PageType::GREENHOUSE);
 	}
 	
 	public function getShoes()
 	{
-		return View::make('pages.list');
+		$this->generate_list_layout(PageType::SHOES);
+	}
+	
+	public function getOther()
+	{
+		$this->generate_list_layout(PageType::OTHER);
+	}
+	
+	public function getPromo()
+	{
+		$this->generate_list_layout(PageType::PROMO);
+	}
+	
+	public function getContact()
+	{
+		$this->generate_list_layout(PageType::CONTACT);
 	}
 	
 	public function getProduct($id)
@@ -46,4 +63,13 @@ class PageController extends BaseController {
 		return View::make('pages.detail')
 		    ->with('data', $data);
 	}
+	
+	private function generate_list_layout($page_type) {
+        $data = array(
+	        'products' => Page::where('type', $page_type)
+	            ->where('lang', App::getLocale())
+	            ->get()
+	        );
+		$this->layout->content = View::make('pages.list')->with('data', $data);
+    }
 }

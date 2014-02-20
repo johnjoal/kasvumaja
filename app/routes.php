@@ -30,6 +30,16 @@ Route::get('/logout', function()
     return Redirect::to('/');
 });
 Route::controller('admin', 'AdminController');
+
+Route::post('/ajax/saveimage', function() {
+    //$name = randomString();
+    //$ext = explode('.',$_FILES['file']['name']);
+    //$filename = $name.'.'.$ext[1];
+    $destination = '/var/lib/stickshift/52ffea865004463c94000024/app-root/data/771272/public/uploads/'.$_FILES['file']['name'];
+    $location = $_FILES["file"]["tmp_name"];
+    move_uploaded_file($location,$destination);
+    return asset('uploads/'.$_FILES['file']['name']);
+});
 /*** END ADMIN MODE ***/
 
 $languages = array('ru','et');
@@ -39,12 +49,10 @@ if(in_array($locale, $languages))
 else
 	$locale = App::getLocale();
 
-Route::get('/{lang?}', function($lang = null)
-{
-	return View::make('pages.index');
-});
-
+Route::get('/{lang?}', array('uses' => 'PageController@getIndex'));
 Route::group(array('prefix' => $locale), function()
 {
 	Route::controller('page', 'PageController');
 });
+
+Route::controller('page', 'PageController');

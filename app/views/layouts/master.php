@@ -1,3 +1,9 @@
+<?php
+    function get_nav_active($compare) {
+        if (Request::is($compare))
+            return 'class="active"';
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -25,18 +31,14 @@
   </div>
 
     <!-- Fixed navbar -->
-    <div class="navbar navbar-default navbar-static-top" role="navigation">
-      <div class="container">
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="">ДАЧНЫЕ ТЕПЛИЦЫ</a></li>
-            <li><a href="#shoes">ОБУВЬ</a></li>
-            <li><a href="#other">ПРОЧИЕ ТОВАРЫ</a></li>
-            <li><a href="#compains">АКЦИИ</a></li>
-            <li><a href="#contact">КОНТАКТ</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
+    <div class="navbar-custom navbar-static-top" role="navigation">
+        <ul class="nav navbar-nav">
+            <li <?php echo get_nav_active('') ?>><a href="/">ДАЧНЫЕ ТЕПЛИЦЫ</a></li>
+            <li <?php echo get_nav_active('page/shoes') ?>><a href="/page/shoes">ОБУВЬ</a></li>
+            <li <?php echo get_nav_active('page/other') ?>><a href="/page/other">ПРОЧИЕ ТОВАРЫ</a></li>
+            <li <?php echo get_nav_active('page/promo') ?>><a href="/page/promo">АКЦИИ</a></li>
+            <li <?php echo get_nav_active('page/contact') ?>><a href="/page/contact">КОНТАКТ</a></li>
+        </ul>
     </div>
     
     <div class="container">
@@ -45,7 +47,28 @@
 
     <div id="footer">
       <div class="container">
-        <p class="text-muted"></p>
+        <div class="col-xs-4 col-sm-3">
+            <address>
+            <strong>Prime Line OÜ</strong><br>
+            Reg nr. 12430378
+            </address>
+        </div>
+        <div class="col-xs-4 col-sm-3">
+            <address>
+            <strong>КОНТАКТ</strong><br>
+            (+372) 5915 1801 <?php echo HTML::image('img/flag_et.jpg')?><br>
+            (+372) 5688 1406 <?php echo HTML::image('img/flag_ru.jpg')?><br>
+            (+372) 5191 3832 <?php echo HTML::image('img/flag_et.jpg')?> <?php echo HTML::image('img/flag_ru.jpg')?>
+            </address>
+        </div>
+        <div class="col-xs-4 col-sm-3 text-center">
+            <strong>ISO</strong><br>
+            <?php echo HTML::image('img/iso.png')?>
+        </div>
+        <div class="col-xs-4 col-sm-3 text-center">
+            <strong>SERTIFIKAADID</strong>
+            <?php echo HTML::image('img/sertifikat.gif')?>
+        </div>
       </div>
     </div>
     

@@ -10,12 +10,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap 101 Template</title>
+    <title>Kasvumaja :: Admin</title>
 
     <!-- Bootstrap -->
     <?php echo HTML::style('css/bootstrap.min.css'); ?>
     <?php echo HTML::style('css/bootstrap-theme.min.css'); ?>
-    <?php echo HTML::style('css/style.css'); ?>
+    <?php echo HTML::style('css/admin.css'); ?>
     <?php echo HTML::style('packages/font-awesome-4.0.3/css/font-awesome.min.css'); ?>
     <?php echo HTML::style('packages/summernote-0.5.0/summernote.css'); ?>
 
@@ -68,12 +68,6 @@
         <?php } ?>
         
         <?php echo $content; ?>
-    </div>
-
-    <div id="footer">
-      <div class="container">
-        <p class="text-muted"></p>
-      </div>
     </div>
     
     <div id="logout-confirm-modal" class="modal fade" role="dialog" aria-labelledby="delete" aria-hidden="true">

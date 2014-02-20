@@ -1,0 +1,19 @@
+.bs-callout {
+    /*margin: 20px 0;*/
+    padding: 10px;
+    border-left: 3px solid #eee;
+}
+.bs-callout-info {
+    background-color: #f4f8fa;
+    border-color: #5bc0de;
+}
+.bs-callout-success {
+    background-color: #DAFDCC;
+    border-color: #5cb85c;
+    color: #468847;
+}
+.bs-callout-error {
+    background-color: #f2dede;
+    border-color: #d9534f;
+    color: #d9534f;
+}

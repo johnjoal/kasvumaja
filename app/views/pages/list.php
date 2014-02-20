@@ -1,4 +1,3 @@
-<h1>Products</h1>
 
 <?php foreach($data['products'] as $product) { ?>
     <h1><?php echo $product->title ?></h1>

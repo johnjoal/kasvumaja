@@ -25,21 +25,6 @@ class AdminController extends BaseController {
         $this->beforeFilter('auth');
         //$this->beforeFilter('csrf', array('on' => 'post'));
     }
-    
-    private function generate_page_edit_layout($id, $page_type) {
-        if (isset($id))
-	        $page = Page::find($id);
-	    else
-	        $page = new Page(array('lang' => 'ru', 'type' => $page_type));
-        $this->layout->content = View::make('admin/page-edit')->with('page', $page);;
-    }
-    private function generate_pages_layout($page_type) {
-        $data = array(
-            'pages' => Page::where('type', $page_type)->get(),
-            'page_type' => $page_type);
-        $this->layout->content = View::make('admin/pages')
-            ->with('data', $data);
-    }
 
 	public function getIndex()
 	{
@@ -87,6 +72,7 @@ class AdminController extends BaseController {
         $page->lang = Input::get('lang');
         $page->title = Input::get('title');
         $page->content = Input::get('content');
+        $page->description = Input::get('description');
         
         $page->save();
         
@@ -105,4 +91,20 @@ class AdminController extends BaseController {
 	            ->with('data', $data);
 	    }
 	}
+	
+	private function generate_page_edit_layout($id, $page_type) {
+        if (isset($id))
+	        $page = Page::find($id);
+	    else
+	        $page = new Page(array('lang' => 'ru', 'type' => $page_type));
+        $this->layout->content = View::make('admin/page-edit')->with('page', $page);;
+    }
+    
+    private function generate_pages_layout($page_type) {
+        $data = array(
+            'pages' => Page::where('type', $page_type)->get(),
+            'page_type' => $page_type);
+        $this->layout->content = View::make('admin/pages')
+            ->with('data', $data);
+    }
 }
