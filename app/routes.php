@@ -32,12 +32,19 @@ Route::get('/logout', function()
 Route::controller('admin', 'AdminController');
 /*** END ADMIN MODE ***/
 
+$languages = array('ru','et');
+$locale = Request::segment(1);
+if(in_array($locale, $languages))
+	App::setLocale($locale);
+else
+	$locale = App::getLocale();
+
 Route::get('/{lang?}', function($lang = null)
 {
-    if (!isset($lang))
-        $lang = App::getLocale();
-    App::setLocale($lang);
-	//return View::make('hello')->with('lang', $lang);
+	return View::make('pages.index');
 });
 
-Route::controller('pages', 'PageController');
+Route::group(array('prefix' => $locale), function()
+{
+	Route::controller('page', 'PageController');
+});

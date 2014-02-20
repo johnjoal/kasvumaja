@@ -16,14 +16,14 @@
         <form class="form-horizontal" role="form" method="post" action="/login">
             <div class="form-group">
                 <label for="email" class="col-sm-3 control-label">Email</label>
-                <div class="col-sm-8"><input type="email" class="form-control" id="email" name="email" placeholder="Enter email"></div>
+                <div class="col-sm-8"><input type="email" class="form-control" id="email" name="email" placeholder="Email"></div>
             </div>
             <div class="form-group">
-                <label for="password" class="col-sm-3 control-label">Password</label>
+                <label for="password" class="col-sm-3 control-label">Пароль</label>
                 <div class="col-sm-8">
-                    <p><input type="password" class="form-control" id="password" name="password" placeholder="Password"></p>
+                    <p><input type="password" class="form-control" id="password" name="password" placeholder="Пароль"></p>
                     <div class="pull-right">
-                        <button type="submit" class="btn btn-primary">Login</button>
+                        <button type="submit" class="btn btn-primary">Войти</button>
                     </div>
                 </div>
             </div>

@@ -17,14 +17,33 @@ class PageController extends BaseController {
 	
 	protected $layout = 'layouts.master';
 
-	public function index()
+	public function getIndex()
 	{
-		return View::make('products/index');
+		return View::make('pages.index');
 	}
     
-    public function create()
+    public function getProducts()
 	{
-	    $this->layout->content = View::make('products.create');
-		//return View::make('products/create');
+	    $data = array(
+	        'products' => Page::where('type', PageType::GREENHOUSE)
+	            ->where('lang', App::getLocale())
+	            ->get()
+	        );
+		$this->layout->content = View::make('pages.list')
+		    ->with('data', $data);
+	}
+	
+	public function getShoes()
+	{
+		return View::make('pages.list');
+	}
+	
+	public function getProduct($id)
+	{
+	    $data = array(
+	        'page' => Page::find($id)
+	        );
+		return View::make('pages.detail')
+		    ->with('data', $data);
 	}
 }

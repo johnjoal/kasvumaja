@@ -1,1 +1,1 @@
-<h1>Products index</h1>
+<h1>Your language is set to: <?php echo App::getLocale() ?></h1>
