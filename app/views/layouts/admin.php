@@ -44,24 +44,26 @@
             <li <?php echo get_nav_active('admin/promo') ?>><a href="/admin/promo">АКЦИИ</a></li>
             <li <?php echo get_nav_active('admin/contact') ?>><a href="/admin/contact">КОНТАКТ</a></li>
           </ul>
+          <div style="padding:8px;">
+            <button class="btn btn-primary pull-right" data-toggle="modal" data-target="#logout-confirm-modal">Выйти</button>
+            <!--<a href="/logout" role="button" class="btn btn-primary pull-right">Выйти</a>-->
+          </div>
         </div><!--/.nav-collapse -->
       </div>
     </div>
     
     <div class="container">
         <?php if(Session::has('success')) { ?>
-            <div class="bs-callout bs-callout-success">
-                <h4>
-                    <?php echo Session::get('success') ?>
-                </h4>
+            <div class="alert alert-success fade in">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <?php echo Session::get('success') ?>
             </div>
         <?php } ?>
         
         <?php if(Session::has('error')) { ?>
-            <div class="bs-callout bs-callout-error">
-                <h4>
-                    <?php echo Session::get('error') ?>
-                </h4>
+            <div class="alert alert-danger fade in">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <?php echo Session::get('error') ?>
             </div>
         <?php } ?>
         
@@ -73,6 +75,20 @@
         <p class="text-muted"></p>
       </div>
     </div>
+    
+    <div id="logout-confirm-modal" class="modal fade" role="dialog" aria-labelledby="delete" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p>Выйти из админки?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Отменить</button>
+                    <a id="linkDeleteConfirm" href="/logout" role="button" class="btn btn-primary">Выйти</a>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
     
     <?php echo HTML::script('js/jquery_1.11.0.min.js'); ?>
     <?php echo HTML::script('js/bootstrap.min.js'); ?>

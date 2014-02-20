@@ -1,25 +1,21 @@
-<table class="table table-striped" id="data">
-<thead>
-    <tr>
-        <th>#</th>
-        <th>Lang</th>
-        <th>Title</th>
-        <th><a href="/admin/page-edit/<?php echo $page_type ?>" role="button" class="btn btn-primary pull-right">Добавить</a></th>
-    </tr>
-</thead>
-<tbody>
-<?php foreach($pages as $page) { ?>
-    <tr>
-        <td><?php echo $page->id ?></td>
-        <td><?php echo $page->lang ?></td>
-        <td><?php echo $page->title ?></td>
-        <td>
-            <div class="btn-group pull-right">
-            <a href="<?php echo action('AdminController@getPageEdit', array($page_type, $page->id)) ?>" role="button" class="btn btn-primary">Изменить</a>
-            <a href="" role="button" class="btn btn-danger" onclick="deleteItem('/admin/page-delete/<?php echo $page->id ?>','Удалить: <?php echo $page->title ?>?','#data')">Удалить</a>
-            </div>
-        </td>
-    </tr>
-<?php } ?>
-</tbody>
-</table>
+<div id="data">
+    <?php echo View::make('admin/partials/pages')->with('data', $data); ?>
+</div>
+
+<div id="delete-confirm-modal" class="modal fade" role="dialog" aria-labelledby="delete" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Запись будет удалена!</h4>
+      </div>
+      <div class="modal-body">
+        <p>Удалить запись <strong><span id="itemTitle"></span></strong>?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Отменить</button>
+        <a id="linkDeleteConfirm" href="#" role="button" class="btn btn-danger">Удалить</a>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

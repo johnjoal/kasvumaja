@@ -1,17 +1,35 @@
-<div class="center-block" style="width:400px; margin-top:50px">
-    <form class="form-horizontal" role="form" method="post" action="/login">
-        <div class="form-group">
-            <label for="email" class="col-sm-3 control-label">Email</label>
-            <div class="col-sm-8"><input type="email" class="form-control" id="email" name="email" placeholder="Enter email"></div>
-        </div>
-        <div class="form-group">
-            <label for="password" class="col-sm-3 control-label">Password</label>
-            <div class="col-sm-8">
-                <p><input type="password" class="form-control" id="password" name="password" placeholder="Password"></p>
-                <div class="pull-right">
-                    <button type="submit" class="btn btn-primary">Login</button>
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Admin area</title>
+	<?php echo HTML::style('css/bootstrap.min.css'); ?>
+</head>
+<body>
+    <div class="center-block" style="width:400px; margin-top:20%;">
+        <?php if(Session::has('error')) { ?>
+            <div class="alert alert-danger fade in">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <?php echo Session::get('error') ?>
+            </div>
+        <?php } ?>
+        <form class="form-horizontal" role="form" method="post" action="/login">
+            <div class="form-group">
+                <label for="email" class="col-sm-3 control-label">Email</label>
+                <div class="col-sm-8"><input type="email" class="form-control" id="email" name="email" placeholder="Enter email"></div>
+            </div>
+            <div class="form-group">
+                <label for="password" class="col-sm-3 control-label">Password</label>
+                <div class="col-sm-8">
+                    <p><input type="password" class="form-control" id="password" name="password" placeholder="Password"></p>
+                    <div class="pull-right">
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </form>
-</div>
+        </form>
+    </div>
+    <?php echo HTML::script('js/jquery_1.11.0.min.js'); ?>
+    <?php echo HTML::script('js/bootstrap.min.js'); ?>
+</body>
+</head>

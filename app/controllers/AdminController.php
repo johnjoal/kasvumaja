@@ -17,6 +17,15 @@ class AdminController extends BaseController {
 
     protected $layout = 'layouts.admin';
     
+    /**
+     * Instantiate a new AdminController instance.
+     */
+    public function __construct()
+    {
+        $this->beforeFilter('auth');
+        //$this->beforeFilter('csrf', array('on' => 'post'));
+    }
+    
     private function generate_page_edit_layout($id, $page_type) {
         if (isset($id))
 	        $page = Page::find($id);
@@ -25,10 +34,11 @@ class AdminController extends BaseController {
         $this->layout->content = View::make('admin/page-edit')->with('page', $page);;
     }
     private function generate_pages_layout($page_type) {
-        $pages = Page::where('type', $page_type)->get();
+        $data = array(
+            'pages' => Page::where('type', $page_type)->get(),
+            'page_type' => $page_type);
         $this->layout->content = View::make('admin/pages')
-            ->with('pages', $pages)
-            ->with('page_type', $page_type);
+            ->with('data', $data);
     }
 
 	public function getIndex()
@@ -88,9 +98,11 @@ class AdminController extends BaseController {
 	        $page = Page::find($id);
 	        $page->delete();
 	        
-	        return View::make('admin/pages')
-	            ->with('pages', Page::where('type', $page->type)->get())
-	            ->with('page_type', $page->type);
+	        $data = array(
+                'pages' => Page::where('type', $page->type)->get(),
+                'page_type' => $page->type);
+	        return View::make('admin/partials/pages')
+	            ->with('data', $data);
 	    }
 	}
 }

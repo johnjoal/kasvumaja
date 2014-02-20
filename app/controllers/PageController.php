@@ -1,6 +1,6 @@
 <?php
 
-class ProductController extends BaseController {
+class PageController extends BaseController {
 
 	/*
 	|--------------------------------------------------------------------------
