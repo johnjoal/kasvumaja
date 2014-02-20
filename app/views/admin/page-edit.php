@@ -6,7 +6,7 @@
         <input type="text" class="form-control" id="title" name="title" placeholder="Title" value="<?php echo $page->title ?>" />
     </div>
     <div class="form-group">
-        <label>Короткое описание</label>
+        <label>Краткое описание</label>
         <textarea class="summernote-description" name="description"><?php echo $page->description ?></textarea>
     </div>
     <div class="form-group">

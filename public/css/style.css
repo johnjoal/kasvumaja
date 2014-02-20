@@ -66,6 +66,9 @@ body {
 }
 
 /* CONTENT */
+.content-custom {
+  text-align: center;
+}
 .content-custom h1,
 .content-custom h2,
 .content-custom h3,
