@@ -33,7 +33,7 @@
     <!-- Fixed navbar -->
     <div class="navbar-custom navbar-static-top" role="navigation">
         <ul class="nav navbar-nav">
-            <li <?php echo get_nav_active('') ?>><a href="/">ДАЧНЫЕ ТЕПЛИЦЫ</a></li>
+            <li <?php echo get_nav_active('/') ?>><a href="/">ДАЧНЫЕ ТЕПЛИЦЫ</a></li>
             <li <?php echo get_nav_active('page/shoes') ?>><a href="/page/shoes">ОБУВЬ</a></li>
             <li <?php echo get_nav_active('page/other') ?>><a href="/page/other">ПРОЧИЕ ТОВАРЫ</a></li>
             <li <?php echo get_nav_active('page/promo') ?>><a href="/page/promo">АКЦИИ</a></li>

@@ -66,9 +66,19 @@ body {
 }
 
 /* CONTENT */
-.content-custom > h1,
-.content-custom > h2,
-.content-custom > h3,
-.content-custom > h4 {
+.content-custom h1,
+.content-custom h2,
+.content-custom h3,
+.content-custom h4,
+.content-custom h5,
+.content-custom h6 {
     color:#017D0B;
+}
+.content-custom .products ul {
+  text-align: center;
+}
+.content-custom .products li {
+  list-style: none;
+  display: inline-block;
+  margin: 12px 16px;
 }
