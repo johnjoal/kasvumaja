@@ -54,9 +54,9 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'localhost',
-			'database'  => 'kasvumaja',
-			'username'  => 'root',
+			'host'      => '127.5.109.129',
+			'database'  => 'c9',
+			'username'  => 'johnjoal',
 			'password'  => '',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_general_ci',
