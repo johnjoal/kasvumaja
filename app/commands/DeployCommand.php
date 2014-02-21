@@ -41,12 +41,12 @@ class DeployCommand extends Command {
 		$remote = $this->argument('remote');
 		$config = app()->config['remote.connections.'.$remote];
 
-		$commands = [
+        //'git checkout -f',
+		$commands = array(
 			'cd '.$config['root'],
-			//'git checkout -f',
 			'git pull -f',
-			'php artisan cache:clear',
-		];
+			'php artisan cache:clear'
+		);
 
 		if($this->option('migrate'))
 			$commands[] = 'php artisan migrate';
@@ -90,3 +90,4 @@ class DeployCommand extends Command {
 			array('migrate', null, InputOption::VALUE_NONE, 'Execute php artisan migrate.', null),
 		);
 	}
+}

@@ -75,7 +75,7 @@
     
     <?php echo HTML::script('js/jquery_1.11.0.min.js'); ?>
     <?php echo HTML::script('packages/jquery.fs.boxer/jquery.fs.boxer.min.js'); ?>
-    <?php echo HTML::script('js/detail.js'); ?>
+    <?php echo HTML::script('js/main.js'); ?>
     <?php //echo HTML::script('js/bootstrap.min.js'); ?>
   </body>
 </html>

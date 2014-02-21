@@ -66,6 +66,9 @@ body {
 }
 
 /* CONTENT */
+.title {
+    color:#017D0B;
+}
 .content-custom {
   text-align: center;
 }
@@ -76,6 +79,11 @@ body {
 .content-custom h5,
 .content-custom h6 {
     color:#017D0B;
+}
+
+.content-custom .products h3,
+.content-custom .products h4 {
+  color: #000;
 }
 .content-custom .products ul {
   text-align: center;
@@ -101,4 +109,8 @@ body {
 .content-detail h5,
 .content-detail h6 {
     color:#017D0B;
+}
+
+.content-detail a.boxer {
+    margin:4px;
 }

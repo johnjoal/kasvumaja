@@ -55,8 +55,8 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'kasvumaja',
-			'username'  => 'root',
+			'database'  => 'vitalyva_kasvumaja',
+			'username'  => 'vitalyva_kasv',
 			'password'  => '',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_general_ci',
