@@ -85,3 +85,20 @@ body {
   display: inline-block;
   margin: 12px 16px;
 }
+.content-custom .products a,
+.content-custom .products a:hover,
+.content-custom .products a:focus {
+    text-decoration: none;
+}
+.content-custom .products small {
+    color: #999999;
+}
+
+.content-detail h1,
+.content-detail h2,
+.content-detail h3,
+.content-detail h4,
+.content-detail h5,
+.content-detail h6 {
+    color:#017D0B;
+}

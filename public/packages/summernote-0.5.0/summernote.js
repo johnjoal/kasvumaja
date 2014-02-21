@@ -885,10 +885,10 @@
     }
     /* jshint ignore:end */
 
-    this.insertImage = function ($editable, sUrl) {
+    this.insertImage = function ($editable, sUrl, sDataSrc) {
       async.loadImage(sUrl).done(function (image) {
         recordUndo($editable);
-        var $image = $('<img>').attr('src', sUrl);
+        var $image = $('<img>').attr('src', sUrl).attr('data-src', sDataSrc);
         $image.css('width', Math.min($editable.width(), image.width));
         range.create().insertNode($image[0]);
       }).fail(function () {

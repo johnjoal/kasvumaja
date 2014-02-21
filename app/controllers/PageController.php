@@ -23,8 +23,8 @@ class PageController extends BaseController {
 	        'page' => Page::where('type', PageType::HOME)
 	            ->where('lang', App::getLocale())
 	            ->first(),
-	        'products' => Page::where('type', PageType::GREENHOUSE)
-	            ->where('lang', App::getLocale())
+	        'products' => Page::where('lang', App::getLocale()) //where('type', PageType::GREENHOUSE)
+	            ->where('show_on_cover', true)
 	            ->get()
 	        );
 		$this->layout->content = View::make('pages.index')->with('data', $data);;
@@ -55,13 +55,12 @@ class PageController extends BaseController {
 		$this->generate_list_layout(PageType::CONTACT);
 	}
 	
-	public function getProduct($id)
+	public function getDetail($id)
 	{
 	    $data = array(
 	        'page' => Page::find($id)
 	        );
-		return View::make('pages.detail')
-		    ->with('data', $data);
+		$this->layout->content = View::make('pages.detail')->with('data', $data);
 	}
 	
 	private function generate_list_layout($page_type) {

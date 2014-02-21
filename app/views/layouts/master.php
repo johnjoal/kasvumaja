@@ -16,6 +16,7 @@
     <?php echo HTML::style('css/bootstrap.min.css'); ?>
     <?php echo HTML::style('css/bootstrap-theme.min.css'); ?>
     <?php echo HTML::style('css/style.css'); ?>
+    <?php echo HTML::style('packages/jquery.fs.boxer/jquery.fs.boxer.css'); ?>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -73,6 +74,8 @@
     </div>
     
     <?php echo HTML::script('js/jquery_1.11.0.min.js'); ?>
-    <?php echo HTML::script('js/bootstrap.min.js'); ?>
+    <?php echo HTML::script('packages/jquery.fs.boxer/jquery.fs.boxer.min.js'); ?>
+    <?php echo HTML::script('js/detail.js'); ?>
+    <?php //echo HTML::script('js/bootstrap.min.js'); ?>
   </body>
 </html>

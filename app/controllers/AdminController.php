@@ -73,6 +73,7 @@ class AdminController extends BaseController {
         $page->title = Input::get('title');
         $page->content = Input::get('content');
         $page->description = Input::get('description');
+        $page->show_on_cover = Input::get('show_on_cover');
         
         $page->save();
         
@@ -90,6 +91,27 @@ class AdminController extends BaseController {
 	        return View::make('admin/partials/pages')
 	            ->with('data', $data);
 	    }
+	}
+	
+	public function postUploadImage() {
+	    $file = $_FILES['file'];
+	    
+	    $uploads_paht = public_path() . '/uploads/';
+	    $image = Image::make($file['tmp_name'])->save($uploads_paht . $file['name']);
+	    
+	    $create_thumbnail = Input::get('create_thumbnail');
+	    if ($create_thumbnail == 'true') {
+	        $width = Input::get('width'); if (!isset($width)) $width = 267;
+	        $height = Input::get('height'); if (!isset($height)) $width = 200;
+	        $ext = explode('.', $file['name']);
+	        $thumbnail_name = $ext[0] . '.thumbnail.' . $ext[1];
+	        $image->resize($width, $height)->save($uploads_paht.$thumbnail_name);
+	    }
+	    
+        if ($create_thumbnail == 'true')
+            return array('url' => asset('uploads/'.$thumbnail_name), 'dataSrc' => '/uploads/'.$file['name']);
+	    else
+	        return array('url' => asset('uploads/'.$file['name']));
 	}
 	
 	private function generate_page_edit_layout($id, $page_type) {

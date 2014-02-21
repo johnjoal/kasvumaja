@@ -3,7 +3,31 @@
         <?php echo Form::languageDropDown($page->lang) ?>
     </div>
     <div class="form-group">
-        <input type="text" class="form-control" id="title" name="title" placeholder="Title" value="<?php echo $page->title ?>" />
+        <input type="text" class="form-control" id="title" name="title" placeholder="Title" value="<?php echo $page->title ?>">
+    </div>
+    <div class="form-group">
+        <label for="show_on_cover" class="checkbox-inline">
+          <input type="checkbox" id="show_on_cover" name="show_on_cover" value="1" <?php echo $page->show_on_cover ? 'checked' : '' ?>> Показать на главной странице
+        </label>
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-2">
+            <div class="input-group">
+                <span class="input-group-addon">Ширина</span>
+                <input type="text" id="width" name="width" class="form-control" value="267">
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="input-group">
+                <span class="input-group-addon">Высота</span>
+                <input type="text" id="height" name="height" class="form-control" value="200">
+            </div>
+        </div>
+        <div class="col-sm-6 checkbox">
+            <label for="create_thumbnail" class="checkbox-inline">
+                <input type="checkbox" id="create_thumbnail" name="create_thumbnail" value="1" checked> Уменьшать картинки (при загрузке новых)
+            </label>
+        </div>
     </div>
     <div class="form-group">
         <label>Краткое описание</label>

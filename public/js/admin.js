@@ -13,18 +13,21 @@ $(document).ready(function() {
     });
 });
 
-function sendFile(file,editor,welEditable) {
+function sendFile(file,editor,welEditable,addDataSrcToAnchor) {
     var data = new FormData();
     data.append("file", file);
+    data.append("width", $('#width').val());
+    data.append("height", $('#height').val());
+    data.append("create_thumbnail", $('#create_thumbnail').prop('checked'));
     $.ajax({
         data: data,
         type: "POST",
-        url: "/ajax/saveimage",
+        url: "/admin/upload-image",
         cache: false,
         contentType: false,
         processData: false,
-        success: function(url) {
-            editor.insertImage(welEditable, url);
+        success: function(data) {
+            editor.insertImage(welEditable, data['url'], data['dataSrc']);
         }
     });
 }

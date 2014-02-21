@@ -86,7 +86,7 @@
     
     <?php echo HTML::script('js/jquery_1.11.0.min.js'); ?>
     <?php echo HTML::script('js/bootstrap.min.js'); ?>
-    <?php echo HTML::script('packages/summernote-0.5.0/summernote.min.js'); ?>
+    <?php echo HTML::script('packages/summernote-0.5.0/summernote.js'); ?>
     <?php echo HTML::script('js/admin.js'); ?>
   </body>
 </html>

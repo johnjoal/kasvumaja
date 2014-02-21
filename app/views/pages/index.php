@@ -4,8 +4,10 @@
     <ul class="products">
         <?php foreach($data['products'] as $product) { ?>
         <li>
-            <h4><?php echo $product->title ?></h4>
-            <div><?php echo $product->description ?></div>
+            <a href="<?php echo action('PageController@getDetail', array($product->id)) ?>">
+                <h4><?php echo $product->title ?></h4>
+                <div><?php echo $product->description ?></div>
+            </a>
         </li>
         <?php } ?>
     </ul>
