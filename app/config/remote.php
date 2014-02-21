@@ -29,12 +29,12 @@ return array(
 	'connections' => array(
 
 		'production' => array(
-			'host'      => 'vitaly-valery.com:38307',
+			'host'      => '38307',
 			'username'  => '',
 			'password'  => '',
 			'key'       => 'id_dsa.ppk',
 			'keyphrase' => 'akKmfnek203dKls',
-			'root'      => '/home/vitalyva/public_html/kasvumaja.ee',
+			'root'      => 'public_html/kasvumaja.ee',
 		),
 
 	),

@@ -74,6 +74,7 @@ class AdminController extends BaseController {
         $page->content = Input::get('content');
         $page->description = Input::get('description');
         $page->show_on_cover = Input::get('show_on_cover');
+        if (!isset($page->show_on_cover)) $page->show_on_cover = 0;
         
         $page->save();
         
@@ -104,14 +105,14 @@ class AdminController extends BaseController {
 	        $width = Input::get('width'); if (!isset($width)) $width = 267;
 	        $height = Input::get('height'); if (!isset($height)) $width = 200;
 	        $ext = explode('.', $file['name']);
-	        $thumbnail_name = $ext[0] . '.thumbnail.' . $ext[1];
+	        $thumbnail_name = $ext[0] . '_thumb.' . $ext[1];
 	        $image->resize($width, $height)->save($uploads_paht.$thumbnail_name);
 	    }
 	    
         if ($create_thumbnail == 'true')
-            return array('url' => asset('uploads/'.$thumbnail_name), 'dataSrc' => '/uploads/'.$file['name']);
+            return array('url' => '/uploads/'.$thumbnail_name, 'dataSrc' => '/uploads/'.$file['name']);
 	    else
-	        return array('url' => asset('uploads/'.$file['name']));
+	        return array('url' => '/uploads/'.$file['name']);
 	}
 	
 	private function generate_page_edit_layout($id, $page_type) {

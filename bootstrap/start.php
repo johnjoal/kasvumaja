@@ -26,9 +26,8 @@ $app = new Illuminate\Foundation\Application;
 
 $env = $app->detectEnvironment(array(
 
-	'c9' => array('*.rhcloud.com'),
-	'local' => array('localhost')
-
+	'local' => array('home-pc'),
+	'c9' => array('*.rhcloud.com')
 ));
 
 /*

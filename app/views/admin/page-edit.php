@@ -34,6 +34,9 @@
         <textarea class="summernote-description" name="description"><?php echo $page->description ?></textarea>
     </div>
     <div class="form-group">
+        <button type="submit" class="btn btn-primary">Сохранить</button>
+    </div>
+    <div class="form-group">
         <textarea class="summernote" name="content"><?php echo $page->content ?></textarea>
     </div>
     <div class="form-group">

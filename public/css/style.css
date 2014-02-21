@@ -41,6 +41,7 @@ body {
 .navbar-custom {
   background-color: #6BAA42;
   border-color: #e7e7e7;
+  margin-bottom: 5px;
 }
 .navbar-custom .navbar-text {
   color: #fff;
@@ -51,6 +52,7 @@ body {
   padding-left:45px;
   padding-right:45px;
   margin-right:1px;
+  text-transform: uppercase;
 }
 .navbar-custom .navbar-nav > li > a:hover,
 .navbar-custom .navbar-nav > li > a:focus {
@@ -87,11 +89,13 @@ body {
 }
 .content-custom .products ul {
   text-align: center;
+
 }
 .content-custom .products li {
   list-style: none;
   display: inline-block;
   margin: 12px 16px;
+  vertical-align: top;
 }
 .content-custom .products a,
 .content-custom .products a:hover,
@@ -112,5 +116,6 @@ body {
 }
 
 .content-detail a.boxer {
-    margin:4px;
+    margin-right:8px;
+    margin-bottom:8px;
 }

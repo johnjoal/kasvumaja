@@ -20,7 +20,7 @@ class CreatePagesTable extends Migration {
             $table->string('title');
             $table->longText('content');
             $table->text('description');
-            $table->boolean('show_on_cover');
+            $table->boolean('show_on_cover')->default(0);
             $table->timestamps();
 		});
 	}

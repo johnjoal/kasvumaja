@@ -27,7 +27,7 @@ class PageController extends BaseController {
 	            ->where('show_on_cover', true)
 	            ->get()
 	        );
-		$this->layout->content = View::make('pages.index')->with('data', $data);;
+		$this->setLayout(View::make('pages.index')->with('data', $data), PageType::HOME);
 	}
     
     public function getProducts()
@@ -60,7 +60,7 @@ class PageController extends BaseController {
 	    $data = array(
 	        'page' => Page::find($id)
 	        );
-		$this->layout->content = View::make('pages.detail')->with('data', $data);
+		$this->setLayout(View::make('pages.detail')->with('data', $data), $data['page']->type);
 	}
 	
 	private function generate_list_layout($page_type) {
@@ -69,6 +69,13 @@ class PageController extends BaseController {
 	            ->where('lang', App::getLocale())
 	            ->get()
 	        );
-		$this->layout->content = View::make('pages.list')->with('data', $data);
+        
+		$this->setLayout(View::make('pages.list')->with('data', $data), $page_type);
+    }
+
+    private function setLayout($content, $page_type) {
+    	$this->layout->page_type = $page_type;
+    	$this->layout->lang = App::getLocale();
+    	$this->layout->content = $content;
     }
 }

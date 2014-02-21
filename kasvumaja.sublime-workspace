@@ -1,0 +1,264 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"local",
+				"localhost"
+			],
+			[
+				"q",
+				"qRoot"
+			],
+			[
+				"p",
+				"pRoot"
+			],
+			[
+				"pa",
+				"padding-left"
+			],
+			[
+				"arr",
+				"array"
+			],
+			[
+				"loo",
+				"lookup_uploads"
+			],
+			[
+				"l",
+				"lookup_uploads"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"a",
+				"array	$… = array (…)"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"in",
+				"inline"
+			],
+			[
+				"pr",
+				"product_id"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 146.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/Dev/kasvumaja/app/views/admin/page-edit.php",
+		"/D/Dev/kasvumaja/app/config/remote.php",
+		"/D/Dev/kasvumaja/app/config/compile.php",
+		"/D/Dev/kasvumaja/app/views/layouts/master.php",
+		"/D/Dev/kasvumaja/app/views/pages/index.php",
+		"/D/Dev/kasvumaja/public/css/style.css",
+		"/D/Dev/kasvumaja/app/config/local/database.php",
+		"/D/Dev/kasvumaja/bootstrap/start.php",
+		"/D/Dev/kasvumaja/app/config/database.php",
+		"/D/Dev/kasvumaja/app/start/global.php",
+		"/D/Dev/kasvumaja/app/start/local.php",
+		"/D/Dev/kasvumaja/app/config/c9/database.php",
+		"/D/Dev/kasvumaja/public/css/bootstrap.css",
+		"/D/Dev/kasvumaja/app/config/auth.php",
+		"/D/Dev/kasvumaja/app/views/kasvumaja.php",
+		"/D/Dev/kasvumaja/app/start/artisan.php",
+		"/D/Dev/kasvumaja/public/css/bootstrap-theme.css",
+		"/D/Dev/kasvumaja/app/views/layouts/master.blade.php",
+		"/D/Dev/kasvumaja/index.php",
+		"/D/Dev/kasvumaja/app/routes.php",
+		"/D/Dev/kasvumaja/.htaccess",
+		"/C/Windows/System32/Drivers/etc/hosts",
+		"/D/Dev/kasvumaja/composer.phar",
+		"/D/Dev/kasvumaja/app/View/Layouts/default.ctp",
+		"/D/Dev/kasvumaja/app/Config/database.php",
+		"/D/Dev/kasvumaja/app/Config/bootstrap.php",
+		"/D/Dev/kasvumaja/app/Config/core.php",
+		"/D/Dev/kasvumaja/themes/default/index.html",
+		"/D/Dev/kasvumaja/content/sub/index.md",
+		"/D/Dev/kasvumaja/content/sub/page.md",
+		"/D/Dev/kasvumaja/content/et/index.md",
+		"/D/Dev/kasvumaja/content/ru/index.md",
+		"/D/Dev/kasvumaja/content/index.md",
+		"/D/Dev/kasvumaja/config.php",
+		"/D/Dev/kasvumaja/content/home.md",
+		"/D/Dev/kasvumaja/plugins/pico_editor/pico_editor_config.php",
+		"/D/Dev/kasvumaja/plugins/pico_plugin.php",
+		"/D/Dev/kasvumaja/plugins/index.html",
+		"/D/Dev/kasvumaja/plugins/pico_editor/pico_editor.php",
+		"/D/Dev/kasvumaja/themes/index.html"
+	],
+	"find":
+	{
+		"height": 46.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"D:\\Dev\\decor\\dev"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			",\n",
+			"> .active",
+			".active",
+			"navbar-nav .active",
+			"nav",
+			"navbar",
+			"nav",
+			"navbar",
+			"?>\n",
+			"APP_WEBROOT",
+			"WWW_ROOT",
+			"btn",
+			"']));\n",
+			"');\n",
+			"'));\n",
+			"');\n",
+			"folders"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "kasvumaja.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 333.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
