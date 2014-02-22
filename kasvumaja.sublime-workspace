@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"fo",
+				"font-style"
+			],
+			[
+				"margi",
+				"margin-bottom"
+			],
+			[
 				"ma",
 				"margin"
 			],
@@ -63,17 +71,18 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 0.0,
+		"height": 392.0,
 		"selected_items":
 		[
 		],
-		"width": 0.0
+		"width": 392.0
 	},
 	"console":
 	{
 		"height": 146.0,
 		"history":
 		[
+			"php artisan deploy"
 		]
 	},
 	"distraction_free":
@@ -87,15 +96,26 @@
 	},
 	"file_history":
 	[
-		"/D/Dev/kasvumaja/app/views/admin/page-edit.php",
-		"/D/Dev/kasvumaja/app/config/remote.php",
-		"/D/Dev/kasvumaja/app/config/compile.php",
+		"/D/Dev/kasvumaja/app/controllers/AdminController.php",
+		"/D/Dev/kasvumaja/vendor/autoload.php",
 		"/D/Dev/kasvumaja/app/views/layouts/master.php",
-		"/D/Dev/kasvumaja/app/views/pages/index.php",
+		"/D/Dev/kasvumaja/app/lang/ru/strings.php",
+		"/D/Dev/kasvumaja/app/lang/et/strings.php",
+		"/D/Dev/kasvumaja/app/lang/ru/menu.php",
+		"/D/Dev/kasvumaja/app/lang/et/menu.php",
+		"/D/Dev/kasvumaja/app/controllers/PageController.php",
 		"/D/Dev/kasvumaja/public/css/style.css",
+		"/D/Dev/kasvumaja/app/routes.php",
+		"/D/Dev/kasvumaja/app/database/migrations/2014_02_21_143833_create_pages_table.php",
+		"/D/Dev/kasvumaja/app/views/admin/page-edit.php",
+		"/D/Dev/kasvumaja/app/config/database.php",
 		"/D/Dev/kasvumaja/app/config/local/database.php",
 		"/D/Dev/kasvumaja/bootstrap/start.php",
-		"/D/Dev/kasvumaja/app/config/database.php",
+		"/D/Dev/kasvumaja/app/config/remote.php",
+		"/D/Dev/kasvumaja/.gitignore",
+		"/D/Dev/kasvumaja/kasvumaja.sublime-project",
+		"/D/Dev/kasvumaja/app/config/compile.php",
+		"/D/Dev/kasvumaja/app/views/pages/index.php",
 		"/D/Dev/kasvumaja/app/start/global.php",
 		"/D/Dev/kasvumaja/app/start/local.php",
 		"/D/Dev/kasvumaja/app/config/c9/database.php",
@@ -106,7 +126,6 @@
 		"/D/Dev/kasvumaja/public/css/bootstrap-theme.css",
 		"/D/Dev/kasvumaja/app/views/layouts/master.blade.php",
 		"/D/Dev/kasvumaja/index.php",
-		"/D/Dev/kasvumaja/app/routes.php",
 		"/D/Dev/kasvumaja/.htaccess",
 		"/C/Windows/System32/Drivers/etc/hosts",
 		"/D/Dev/kasvumaja/composer.phar",

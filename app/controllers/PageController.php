@@ -23,7 +23,8 @@ class PageController extends BaseController {
 	        'page' => Page::where('type', PageType::HOME)
 	            ->where('lang', App::getLocale())
 	            ->first(),
-	        'products' => Page::where('lang', App::getLocale()) //where('type', PageType::GREENHOUSE)
+	        'products' => Page::select('id','title','description')
+	        	->where('lang', App::getLocale()) //where('type', PageType::GREENHOUSE)
 	            ->where('show_on_cover', true)
 	            ->get()
 	        );
@@ -52,7 +53,13 @@ class PageController extends BaseController {
 	
 	public function getContact()
 	{
-		$this->generate_list_layout(PageType::CONTACT);
+		$data = array(
+	        'page' => Page::select('title','content')
+	        	->where('lang', App::getLocale())
+	        	->where('type', PageType::CONTACT)
+	        	->first()
+	        );
+		$this->setLayout(View::make('pages.detail')->with('data', $data), PageType::CONTACT);
 	}
 	
 	public function getDetail($id)
