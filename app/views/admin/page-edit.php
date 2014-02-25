@@ -14,13 +14,13 @@
         <div class="col-sm-2">
             <div class="input-group">
                 <span class="input-group-addon">Ширина</span>
-                <input type="text" id="width" name="width" class="form-control" value="267">
+                <input type="text" id="width" name="width" class="form-control" value="<?php echo $page->type == PageType::SHOES ? 190 : 267 ?>">
             </div>
         </div>
         <div class="col-sm-2">
             <div class="input-group">
                 <span class="input-group-addon">Высота</span>
-                <input type="text" id="height" name="height" class="form-control" value="200">
+                <input type="text" id="height" name="height" class="form-control" value="<?php echo $page->type == PageType::SHOES ? 140 : 200 ?>">
             </div>
         </div>
         <div class="col-sm-6 checkbox">

@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Esitame uue kasvuhoone Treshka.Esimest korda oli kasutatud karkassi eriti koormatud piirkonnas lai võimendatud profiil, mis kannatab raskeid lumekoormaid kuni 180 kg/m2, mis on 50% kõrgem kui kasvuhoonel Suvila 2DUM. Представляем новую теплицу Дачная-Трёшка. Впервые в особо нагруженных местах каркаса был применен широкий усиленный профиль, который выдерживает большие снеговые нагрузки до 180кг/м2, что на 50% выше чем у теплицы ДАЧНАЯ-2ДУМ." />
+    <meta name="keywords" content="kasvumaja,kasvuhoone,kasvuhoonete müük,suvila,aed,polükarbonaad,osta,теплица, парник, сад, огород, поликарбонат, дача, купить,установка теплиц, теплицы, парники, парников, теплицу" />
     <title>Kasvumaja</title>
 
     <!-- Bootstrap -->
@@ -20,9 +22,9 @@
     <![endif]-->
   </head>
   <body>
-  <div class="container">
+  <div id="header" class="container">
       <a href="<?php echo get_nav_url($lang)?>"><?php echo HTML::image('img/kasvumaja_logo.gif', 'Kasvumaja', array('id' => 'logo')) ?></a>
-      <?php echo HTML::image('img/tomat.jpg', 'Kasvumaja', array('class' => 'pull-right')) ?>
+      <?php //echo HTML::image('img/tomat.jpg', 'Kasvumaja', array('class' => 'pull-right')) ?>
   </div>
 
     <!-- Fixed navbar -->
@@ -44,6 +46,7 @@
         <address class="pull-right text-right">
             (+372) 5915 1801 <?php echo HTML::image('img/flag_et.jpg')?><br>
             (+372) 5688 1406 <?php echo HTML::image('img/flag_ru.jpg')?><br>
+            (+372) 5191 3832 <?php echo HTML::image('img/flag_et.jpg')?> <?php echo HTML::image('img/flag_ru.jpg')?><br>
             info@kasvumaja.ee
         </address>
     </div>
@@ -57,7 +60,9 @@
         <div class="col-xs-4 col-sm-3">
             <address>
             <strong>Prime Line OÜ</strong><br>
-            Reg nr. 12430378
+            Reg nr. 12430378<br>
+            KMKR nr. EE10169921<br>
+            Katusepapi 14, 11412 Tallinn
             </address>
         </div>
         <div class="col-xs-4 col-sm-3">
@@ -75,6 +80,19 @@
         <div class="col-xs-4 col-sm-3 text-center">
             <strong><?php echo trans('strings.sert') ?></strong>
             <?php echo HTML::image('img/sertifikat.gif')?>
+            <?php if (App::environment('production')) { ?>
+                <!--LiveInternet counter--><script type="text/javascript"><!--
+                document.write("<a href='http://www.liveinternet.ru/click' "+
+                "target=_blank><img src='//counter.yadro.ru/hit?t24.4;r"+
+                escape(document.referrer)+((typeof(screen)=="undefined")?"":
+                ";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+                screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+                ";"+Math.random()+
+                "' alt='' title='LiveInternet: показано число посетителей за"+
+                " сегодня' "+
+                "border='0' width='5' height='5'><\/a>")
+                //--></script><!--/LiveInternet-->
+            <?php } ?>
         </div>
       </div>
     </div>
@@ -83,17 +101,6 @@
     <?php echo HTML::script('packages/jquery.fs.boxer/jquery.fs.boxer.min.js'); ?>
     <?php echo HTML::script('js/main.js'); ?>
     <?php //echo HTML::script('js/bootstrap.min.js'); ?>
-    
-    <?php if (App::environment('production')) { ?>
-        <!--LiveInternet counter--><script type="text/javascript"><!--
-document.write("<a href='http://www.liveinternet.ru/click' "+
-"target=_blank><img src='//counter.yadro.ru/hit?t24.4;r"+
-escape(document.referrer)+((typeof(screen)=="undefined")?"":
-";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
-screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
-";"+Math.random()+"' alt='' border='0' width='0' height='0'><\/a>")
-//--></script><!--/LiveInternet-->
-    <?php } ?>
   </body>
 </html>
 

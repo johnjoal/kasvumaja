@@ -46,3 +46,7 @@ Route::group(array('prefix' => $locale), function()
 });
 
 Route::controller('page', 'PageController');
+
+/*** MAIL ***/
+Route::post('/send-mail', array('uses' => 'PageController@postSendMail', 'before' => 'csrf'));
+/*** END MAIL ***/

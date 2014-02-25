@@ -54,12 +54,12 @@ class PageController extends BaseController {
 	public function getContact()
 	{
 		$data = array(
-	        'page' => Page::select('title','content')
+	        'page' => Page::select('description','content')
 	        	->where('lang', App::getLocale())
 	        	->where('type', PageType::CONTACT)
 	        	->first()
 	        );
-		$this->setLayout(View::make('pages.detail')->with('data', $data), PageType::CONTACT);
+		$this->setLayout(View::make('pages.contact')->with('data', $data), PageType::CONTACT);
 	}
 	
 	public function getDetail($id)
@@ -68,6 +68,26 @@ class PageController extends BaseController {
 	        'page' => Page::find($id)
 	        );
 		$this->setLayout(View::make('pages.detail')->with('data', $data), $data['page']->type);
+	}
+
+	public function postSendMail()
+	{
+		$data = array(
+			'lang' => App::getLocale(),
+			'name' => Input::get('name'),
+			'email' => Input::get('email'),
+			'phone' => Input::get('phone'),
+			'subject' => Input::get('subject'),
+			'content' => Input::get('content'),
+			);
+
+		Mail::send('emails.contact', $data, function($message)
+	    {
+	        $message->from('info@kasvumaja.ee', 'Kasvumaja kontakt');
+	        $message->to('info@kasvumaja.ee')->subject(Input::get('subject'));
+	    });
+
+		return Redirect::back()->withSuccess(trans('strings.mail-success'));
 	}
 	
 	private function generate_list_layout($page_type) {
