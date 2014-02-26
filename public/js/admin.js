@@ -6,7 +6,7 @@ $(document).ready(function() {
         }
     });
     $('.summernote-description').summernote({
-        height: 200,
+        height: 260,
         onImageUpload: function(files, editor, welEditable) {
             sendFile(files[0],editor,welEditable);
         }

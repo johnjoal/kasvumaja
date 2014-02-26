@@ -5,7 +5,31 @@
 		[
 			[
 				"pa",
+				"padding"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"pad",
 				"padding-top"
+			],
+			[
+				"te",
+				"text-decoration"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"min",
+				"min-width"
 			],
 			[
 				"func",
@@ -18,10 +42,6 @@
 			[
 				"margi",
 				"margin-bottom"
-			],
-			[
-				"ma",
-				"margin"
 			],
 			[
 				"local",
@@ -60,10 +80,6 @@
 				"inline-block"
 			],
 			[
-				"in",
-				"inline"
-			],
-			[
 				"pr",
 				"product_id"
 			]
@@ -100,18 +116,22 @@
 	},
 	"file_history":
 	[
+		"/D/Dev/kasvumaja/app/views/layouts/master.php",
+		"/D/Dev/kasvumaja/app/views/pages/contact.php",
+		"/D/Dev/kasvumaja/public/css/style.css",
+		"/D/Dev/kasvumaja/public/css/bootstrap.css",
+		"/D/Dev/kasvumaja/public/css/bootstrap-custom.css",
+		"/D/Dev/kasvumaja/app/views/emails/contact.php",
 		"/D/Dev/kasvumaja/app/controllers/PageController.php",
+		"/D/Dev/kasvumaja/public/js/admin.js",
+		"/D/Dev/kasvumaja/app/views/admin/page-edit.php",
+		"/D/Dev/kasvumaja/app/views/layouts/admin.php",
 		"/D/Dev/kasvumaja/public/js/main.js",
 		"/D/Dev/kasvumaja/app/views/pages/detail.php",
 		"/D/Dev/kasvumaja/app/views/pages/list.php",
-		"/D/Dev/kasvumaja/app/views/admin/page-edit.php",
-		"/D/Dev/kasvumaja/app/views/layouts/master.php",
-		"/D/Dev/kasvumaja/public/css/style.css",
 		"/D/Dev/kasvumaja/app/config/mail.php",
-		"/D/Dev/kasvumaja/app/views/emails/contact.php",
 		"/D/Dev/kasvumaja/app/lang/et/strings.php",
 		"/D/Dev/kasvumaja/app/lang/ru/strings.php",
-		"/D/Dev/kasvumaja/app/views/pages/contact.php",
 		"/D/Dev/kasvumaja/app/routes.php",
 		"/D/Dev/kasvumaja/app/filters.php",
 		"/D/Dev/kasvumaja/app/views/pages/index.php",
@@ -130,7 +150,6 @@
 		"/D/Dev/kasvumaja/app/start/global.php",
 		"/D/Dev/kasvumaja/app/start/local.php",
 		"/D/Dev/kasvumaja/app/config/c9/database.php",
-		"/D/Dev/kasvumaja/public/css/bootstrap.css",
 		"/D/Dev/kasvumaja/app/config/auth.php",
 		"/D/Dev/kasvumaja/app/views/kasvumaja.php",
 		"/D/Dev/kasvumaja/app/start/artisan.php",
@@ -160,7 +179,7 @@
 	],
 	"find":
 	{
-		"height": 46.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -175,6 +194,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"min-width",
+			"media",
+			":\n",
 			",\n",
 			"> .active",
 			".active",

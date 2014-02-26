@@ -13,8 +13,8 @@
     <title>Kasvumaja :: Admin</title>
 
     <!-- Bootstrap -->
-    <?php echo HTML::style('css/bootstrap.min.css'); ?>
-    <?php echo HTML::style('css/bootstrap-theme.min.css'); ?>
+    <?php echo HTML::style('css/bootstrap-admin.min.css'); ?>
+    <?php echo HTML::style('css/bootstrap-theme-admin.min.css'); ?>
     <?php echo HTML::style('css/admin.css'); ?>
     <?php echo HTML::style('packages/font-awesome-4.0.3/css/font-awesome.min.css'); ?>
     <?php echo HTML::style('packages/summernote-0.5.0/summernote.css'); ?>
@@ -85,7 +85,7 @@
     </div><!-- /.modal -->
     
     <?php echo HTML::script('js/jquery_1.11.0.min.js'); ?>
-    <?php echo HTML::script('js/bootstrap.min.js'); ?>
+    <?php echo HTML::script('js/bootstrap-admin.min.js'); ?>
     <?php echo HTML::script('packages/summernote-0.5.0/summernote.js'); ?>
     <?php echo HTML::script('js/admin.js'); ?>
   </body>

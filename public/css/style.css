@@ -8,6 +8,10 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 180px;
 }
+.container {
+  width: 1170px !important;
+}
+
 #header {
   background: #fff url('../img/tomat.jpg') no-repeat right;
   height: 144px;
@@ -20,54 +24,62 @@ body {
   height: 160px;
   background-color: #6BAA42;
   color: #fff;
+  text-align: center;
+  min-width: 1170px;
 }
-#footer .container {
-    padding-left: 100px;
-    padding-right: 100px;
-    padding-top: 20px;
+#footer ul {
+  padding: 20px 0 0 0;
+  margin: 0 auto;
+  display: table;
+  table-layout: fixed;
+  float:none;
 }
-
-.text-center {
-    text-align: center;
+#footer li {
+  display: inline-block;
+  list-style: none;
+  vertical-align: top;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#footer li strong {
+  text-align: center;
 }
 
 /* HEADER */
 #logo {
   margin-top: 40px;
 }
-
-.navbar-nav {
-  margin: 0 auto;
-    display: table;
-    table-layout: fixed;
-    float:none;
-}
 .navbar-custom {
   background-color: #6BAA42;
   border-color: #e7e7e7;
   margin-bottom: 5px;
+  text-align: center;
+  min-width: 1170px;
 }
-.navbar-custom .navbar-text {
-  color: #fff;
+.navbar-custom ul {
+  margin: 0;
+  padding: 0;
 }
-.navbar-custom .navbar-nav > li > a {
+.navbar-custom li {
+  list-style: none;
+  display: inline-block;
+  padding: 5px 25px;
+}
+.navbar-custom li > a {
   color: #fff;
-  text-shadow:none;
-  padding-left:45px;
-  padding-right:45px;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  margin-right:1px;
+  padding: 7px 25px;
+  margin: 0;
+  text-decoration: none;
   text-transform: uppercase;
 }
-.navbar-custom .navbar-nav > li > a:hover,
-.navbar-custom .navbar-nav > li > a:focus {
+.navbar-custom li > a:hover,
+.navbar-custom li > a:focus {
   color: #fff;
   background-color: #77BC49;
 }
-.navbar-custom .navbar-nav > .active > a,
-.navbar-custom .navbar-nav > .active > a:hover,
-.navbar-custom .navbar-nav > .active > a:focus {
+.navbar-custom .active > a,
+.navbar-custom .active > a:hover,
+.navbar-custom .active > a:focus {
   color: #fff;
   background-color: #77BC49;
   font-weight:bold;

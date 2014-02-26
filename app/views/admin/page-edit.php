@@ -5,11 +5,6 @@
     <div class="form-group">
         <input type="text" class="form-control" id="title" name="title" placeholder="Title" value="<?php echo $page->title ?>">
     </div>
-    <div class="form-group">
-        <label for="show_on_cover" class="checkbox-inline">
-          <input type="checkbox" id="show_on_cover" name="show_on_cover" value="1" <?php echo $page->show_on_cover ? 'checked' : '' ?>> Показать на главной странице
-        </label>
-    </div>
     <div class="form-group row">
         <div class="col-sm-2">
             <div class="input-group">
@@ -31,6 +26,9 @@
     </div>
     <div class="form-group">
         <label>Краткое описание</label>
+        <label for="show_on_cover" class="checkbox-inline">
+          <input type="checkbox" id="show_on_cover" name="show_on_cover" value="1" <?php echo $page->show_on_cover ? 'checked' : '' ?>> Показать на главной странице
+        </label>
         <textarea class="summernote-description" name="description"><?php echo $page->description ?></textarea>
     </div>
     <div class="form-group">
