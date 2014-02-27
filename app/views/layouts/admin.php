@@ -43,6 +43,7 @@
             <li <?php echo get_nav_active('admin/other') ?>><a href="/admin/other">ПРОЧИЕ ТОВАРЫ</a></li>
             <li <?php echo get_nav_active('admin/promo') ?>><a href="/admin/promo">АКЦИИ</a></li>
             <li <?php echo get_nav_active('admin/contact') ?>><a href="/admin/contact">КОНТАКТ</a></li>
+            <li <?php echo get_nav_active('admin/internal') ?>><a href="/admin/internal">НАСТРОЙКИ</a></li>
           </ul>
           <div style="padding:8px;">
             <button class="btn btn-primary pull-right" data-toggle="modal" data-target="#logout-confirm-modal">Выйти</button>

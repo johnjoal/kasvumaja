@@ -23,7 +23,6 @@ class AdminController extends BaseController {
     public function __construct()
     {
         $this->beforeFilter('auth');
-        //$this->beforeFilter('csrf', array('on' => 'post'));
     }
 
 	public function getIndex()
@@ -66,17 +65,17 @@ class AdminController extends BaseController {
 	    if(Input::get('id') != '')
 	        $page = Page::find(Input::get('id'));
         else
-	        $page = new Page;
-        
-        $page->type = Input::get('type');
+	        $page = new Page(array('type' => Input::get('type')));
+
         $page->lang = Input::get('lang');
         $page->title = Input::get('title');
         $page->content = Input::get('content');
         $page->description = Input::get('description');
         $page->show_on_cover = Input::get('show_on_cover');
         if (!isset($page->show_on_cover)) $page->show_on_cover = 0;
-        
+
         $page->save();
+        $this->clearCache($page);
         
 	    return Redirect::to('admin/page-edit/'.$page->type.'/'.$page->id)->withSuccess('Запись сохранена!');
 	}
@@ -85,6 +84,7 @@ class AdminController extends BaseController {
 	    if (isset($id)) {
 	        $page = Page::find($id);
 	        $page->delete();
+	        $this->clearCache($page);
 	        
 	        $data = array(
                 'pages' => Page::where('type', $page->type)->get(),
@@ -115,6 +115,27 @@ class AdminController extends BaseController {
 	        return array('url' => '/uploads/'.$file['name']);
 	}
 	
+	public function getInternal() {
+	    $this->layout->content = View::make('admin/internal')
+            ->with('data', Cache::get('internal'));
+	}
+	public function postInternal() {
+	    $data = array(
+	        'et' => array(
+	            'title' => htmlspecialchars(Input::get('et-title')),
+	            'description' => htmlspecialchars(Input::get('et-description')),
+	            'keywords' => htmlspecialchars(Input::get('et-keywords'))
+	        ),
+	        'ru' => array(
+	            'title' => htmlspecialchars(Input::get('ru-title')),
+	            'description' => htmlspecialchars(Input::get('ru-description')),
+	            'keywords' => htmlspecialchars(Input::get('ru-keywords'))
+	        )
+	    );
+	    Cache::forever('internal', $data);
+	    return Redirect::to('admin/internal')->withSuccess('Запись сохранена!');
+	}
+	
 	private function generate_page_edit_layout($id, $page_type) {
         if (isset($id))
 	        $page = Page::find($id);
@@ -129,5 +150,11 @@ class AdminController extends BaseController {
             'page_type' => $page_type);
         $this->layout->content = View::make('admin/pages')
             ->with('data', $data);
+    }
+    
+    private function clearCache($page)
+    {
+        Cache::forget(PageType::HOME.$page->lang);
+        Cache::forget($page->type.$page->lang);
     }
 }

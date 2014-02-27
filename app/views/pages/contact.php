@@ -1,8 +1,10 @@
 <div class="content-detail">
+    <?php if (isset($data['page'])) { ?>
     <div class="row">
     	<div class="col-xs-5"><?php echo $data['page']->content ?></div>
     	<div class="col-xs-6"><?php echo $data['page']->description ?></div>
     </div>
+    <?php } ?>
     
     <br><br>
     <h4><?php echo trans('strings.feedback') ?>:</h4>

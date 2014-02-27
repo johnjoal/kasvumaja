@@ -19,7 +19,22 @@ class PageController extends BaseController {
 
 	public function getIndex()
 	{
-	    $data = array(
+	    $cache_key = PageType::HOME.App::getLocale();
+	    $data = Cache::rememberForever($cache_key, function()
+        {
+            return array(
+    	        'page' => Page::where('type', PageType::HOME)
+    	            ->where('lang', App::getLocale())
+    	            ->first(),
+    	        'products' => Page::select('id','title','description')
+    	        	->where('lang', App::getLocale())
+    	            ->where('show_on_cover', true)
+    	            ->get()
+    	        );
+        });
+        
+        $this->setLayout(View::make('pages.index')->with('data', $data), PageType::HOME);
+	    /*$data = array(
 	        'page' => Page::where('type', PageType::HOME)
 	            ->where('lang', App::getLocale())
 	            ->first(),
@@ -28,7 +43,7 @@ class PageController extends BaseController {
 	            ->where('show_on_cover', true)
 	            ->get()
 	        );
-		$this->setLayout(View::make('pages.index')->with('data', $data), PageType::HOME);
+		$this->setLayout(View::make('pages.index')->with('data', $data), PageType::HOME);*/
 	}
     
     public function getProducts()
@@ -108,15 +123,9 @@ class PageController extends BaseController {
     }
 
     private function setTitleAndMeta() {
-    	if (App::getLocale() == 'ru') {
-    		$this->layout->title = 'ПРОДАЖА ТЕПЛИЦ/ПАРНИКОВ';
-    		$this->layout->keywords = 'теплица, парник, сад, огород, поликарбонат, дача, купить,установка теплиц, теплицы, парники, парников, теплицу';
-    		$this->layout->description = 'Продаются новые теплицы/парники из поликарбоната Трешка. Каркас-оцинкованный металлический профиль, который способен выдерживать снеговые нагрузки до 180кг/м2. Высота 2 метра, ширина 3 метра и длина парника Трешка–4,6,8,... метра. Модель Двушка. Снеговые нагрузки до 240кг/м2. Высота 2,2 метра, ширина 2 метра и длина теплицы «Двушка»–4,6,8,... метра. Цена на теплицу с поликарбонатом от 388 евро (2x4)';
-    	}
-    	else {
-    		$this->layout->title = 'KASVUHOONETE Müük';
-    		$this->layout->keywords = 'kasvumaja, kasvuhoone, kasvuhoonete müük, suvila, aed, polükarbonaad, osta';
-    		$this->layout->description = 'Müüakse uued kasvuhooned polükarbonaadist TRESHKA mudel 2013a. Karkass on valmistatud tsingitud terasprofiilist, mis talub lumekoormust kuni 180kg/m2. Kasvuhoone Treshka laius 3 meetrit, kõrgus 2 meetrit ja pikkus on 4,6,8meetrit. Kasvuhoone Dvushka. Lumekoormust kuni 240kg/m2. Kasvuhoone Dvushka laius 2 meetrit, kõrgus 2,2 meetrit ja pikkus on 4,6,8meetrit.. Hind polükarbonaadiga alates 388 EURO(2X4)';
-    	}
+        $internal = Cache::get('internal');
+        $this->layout->title = $internal[App::getLocale()]['title'];
+        $this->layout->keywords = $internal[App::getLocale()]['keywords'];
+        $this->layout->description = $internal[App::getLocale()]['description'];
     }
 }

@@ -1,6 +1,7 @@
 <div class="content-custom">
     <h3 class="text-center"><?php echo $data['page']->title ?></h3>
     
+    <?php if(isset($data['products'])) { ?>
     <ul class="products">
         <?php foreach($data['products'] as $product) { ?>
         <li>
@@ -11,6 +12,7 @@
         </li>
         <?php } ?>
     </ul>
+    <?php } ?>
     
     <?php echo $data['page']->content ?>
 </div>

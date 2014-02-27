@@ -42,5 +42,4 @@
     </div>
     <input type="hidden" name="id" value="<?php echo $page->id; ?>">
     <input type="hidden" name="type" value="<?php echo $page->type ?>">
-    <!--<input type="hidden" name="_token" value="<?php //echo csrf_token(); ?>">-->
 </form>
