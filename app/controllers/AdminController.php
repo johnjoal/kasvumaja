@@ -68,7 +68,8 @@ class AdminController extends BaseController {
 	        $page = new Page(array('type' => Input::get('type')));
 
         $page->lang = Input::get('lang');
-        $page->title = Input::get('title');
+        $page->title = htmlspecialchars(Input::get('title'));
+        $page->h1 = Input::get('h1');
         $page->content = Input::get('content');
         $page->description = Input::get('description');
         $page->show_on_cover = Input::get('show_on_cover');
@@ -122,12 +123,12 @@ class AdminController extends BaseController {
 	public function postInternal() {
 	    $data = array(
 	        'et' => array(
-	            'title' => htmlspecialchars(Input::get('et-title')),
+	            //'title' => htmlspecialchars(Input::get('et-title')),
 	            'description' => htmlspecialchars(Input::get('et-description')),
 	            'keywords' => htmlspecialchars(Input::get('et-keywords'))
 	        ),
 	        'ru' => array(
-	            'title' => htmlspecialchars(Input::get('ru-title')),
+	            //'title' => htmlspecialchars(Input::get('ru-title')),
 	            'description' => htmlspecialchars(Input::get('ru-description')),
 	            'keywords' => htmlspecialchars(Input::get('ru-keywords'))
 	        )

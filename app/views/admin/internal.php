@@ -2,12 +2,6 @@
     <label>Eesti</label>
     <div class="form-group">
         <div class="input-group">
-            <span class="input-group-addon">Title</span>
-            <input type="text" class="form-control" name="et-title" placeholder="Title" value="<?php echo $data['et']['title'] ?>">
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="input-group">
             <span class="input-group-addon">Description</span>
             <input type="text" class="form-control" name="et-description" placeholder="Description" value="<?php echo $data['et']['description'] ?>">
         </div>
@@ -20,12 +14,6 @@
     </div>
     
     <label>Русский</label>
-    <div class="form-group">
-        <div class="input-group">
-            <span class="input-group-addon">Title</span>
-            <input type="text" class="form-control" name="ru-title" placeholder="Title" value="<?php echo $data['ru']['title'] ?>">
-        </div>
-    </div>
     <div class="form-group">
         <div class="input-group">
             <span class="input-group-addon">Description</span>

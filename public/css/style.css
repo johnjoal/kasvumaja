@@ -86,6 +86,10 @@ body {
 }
 
 /* CONTENT */
+h1,
+.h1 {
+  font-size: 24px;
+}
 .title {
     color:#017D0B;
 }
@@ -128,7 +132,7 @@ body {
 
 .content-detail {
   border: 1px solid #017D0B;
-  padding: 20px;
+  padding: 0 20px 20px 20px;
 }
 .content-detail h1,
 .content-detail h2,

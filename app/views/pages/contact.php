@@ -1,5 +1,6 @@
 <div class="content-detail">
     <?php if (isset($data['page'])) { ?>
+    <h1><?php echo $data['page']->h1 ?></h1>
     <div class="row">
     	<div class="col-xs-5"><?php echo $data['page']->content ?></div>
     	<div class="col-xs-6"><?php echo $data['page']->description ?></div>

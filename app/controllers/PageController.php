@@ -26,55 +26,45 @@ class PageController extends BaseController {
     	        'page' => Page::where('type', PageType::HOME)
     	            ->where('lang', App::getLocale())
     	            ->first(),
-    	        'products' => Page::select('id','title','description')
+    	        'products' => Page::select('id','h1','description')
     	        	->where('lang', App::getLocale())
     	            ->where('show_on_cover', true)
     	            ->get()
     	        );
         });
         
-        $this->setLayout(View::make('pages.index')->with('data', $data), PageType::HOME);
-	    /*$data = array(
-	        'page' => Page::where('type', PageType::HOME)
-	            ->where('lang', App::getLocale())
-	            ->first(),
-	        'products' => Page::select('id','title','description')
-	        	->where('lang', App::getLocale()) //where('type', PageType::GREENHOUSE)
-	            ->where('show_on_cover', true)
-	            ->get()
-	        );
-		$this->setLayout(View::make('pages.index')->with('data', $data), PageType::HOME);*/
+        $this->setLayout(View::make('pages.index')->with('data', $data), PageType::HOME, $data['page']->title);
 	}
     
     public function getProducts()
 	{
-	    $this->generate_list_layout(PageType::GREENHOUSE);
+	    $this->generate_list_layout(PageType::GREENHOUSE, trans('menu.greenhouse'));
 	}
 	
 	public function getShoes()
 	{
-		$this->generate_list_layout(PageType::SHOES);
+		$this->generate_list_layout(PageType::SHOES, trans('menu.shoes'));
 	}
 	
 	public function getOther()
 	{
-		$this->generate_list_layout(PageType::OTHER);
+		$this->generate_list_layout(PageType::OTHER, trans('menu.other'));
 	}
 	
 	public function getPromo()
 	{
-		$this->generate_list_layout(PageType::PROMO);
+		$this->generate_list_layout(PageType::PROMO, trans('menu.promo'));
 	}
 	
 	public function getContact()
 	{
 		$data = array(
-	        'page' => Page::select('description','content')
+	        'page' => Page::select('title', 'h1', 'description','content')
 	        	->where('lang', App::getLocale())
 	        	->where('type', PageType::CONTACT)
 	        	->first()
 	        );
-		$this->setLayout(View::make('pages.contact')->with('data', $data), PageType::CONTACT);
+		$this->setLayout(View::make('pages.contact')->with('data', $data), PageType::CONTACT, trans('menu.contact'));
 	}
 	
 	public function getDetail($id)
@@ -82,7 +72,7 @@ class PageController extends BaseController {
 	    $data = array(
 	        'page' => Page::find($id)
 	        );
-		$this->setLayout(View::make('pages.detail')->with('data', $data), $data['page']->type);
+		$this->setLayout(View::make('pages.detail')->with('data', $data), $data['page']->type, $data['page']->title);
 	}
 
 	public function postSendMail()
@@ -105,26 +95,27 @@ class PageController extends BaseController {
 		return Redirect::back()->withSuccess(trans('strings.mail-success'));
 	}
 	
-	private function generate_list_layout($page_type) {
+	private function generate_list_layout($page_type, $title) {
         $data = array(
 	        'products' => Page::where('type', $page_type)
 	            ->where('lang', App::getLocale())
 	            ->get()
 	        );
-        
-		$this->setLayout(View::make('pages.list')->with('data', $data), $page_type);
+        if (isset($data['products']) && count($data['products']) > 0)
+            $title = $data['products'][0]->title;
+		$this->setLayout(View::make('pages.list')->with('data', $data), $page_type, $title);
     }
 
-    private function setLayout($content, $page_type) {
-    	$this->setTitleAndMeta();
+    private function setLayout($content, $page_type, $title='') {
+    	$this->setMeta();
+    	$this->layout->title = $title;
     	$this->layout->page_type = $page_type;
     	$this->layout->lang = App::getLocale();
     	$this->layout->content = $content;
     }
-
-    private function setTitleAndMeta() {
+    
+    private function setMeta() {
         $internal = Cache::get('internal');
-        $this->layout->title = $internal[App::getLocale()]['title'];
         $this->layout->keywords = $internal[App::getLocale()]['keywords'];
         $this->layout->description = $internal[App::getLocale()]['description'];
     }

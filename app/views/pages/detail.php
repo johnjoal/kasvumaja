@@ -1,4 +1,4 @@
 <div class="content-detail">
-    <h3><?php echo $data['page']->title ?></h3>
+    <h1><?php echo $data['page']->h1 ?></h1>
     <?php echo $data['page']->content ?>
 </div>

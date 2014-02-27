@@ -3,7 +3,16 @@
         <?php echo Form::languageDropDown($page->lang) ?>
     </div>
     <div class="form-group">
-        <input type="text" class="form-control" id="title" name="title" placeholder="Title" value="<?php echo $page->title ?>">
+        <div class="input-group">
+            <span class="input-group-addon">Title</span>
+            <input type="text" class="form-control" id="title" name="title" placeholder="Title" value="<?php echo $page->title ?>">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <span class="input-group-addon">H1</span>
+            <input type="text" class="form-control" id="h1" name="h1" placeholder="H1" value="<?php echo $page->h1 ?>">
+        </div>
     </div>
     <div class="form-group row">
         <div class="col-sm-2">

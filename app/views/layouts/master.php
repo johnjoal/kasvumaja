@@ -22,7 +22,6 @@
   <body>
   <div id="header" class="container">
       <a href="<?php echo get_nav_url($lang)?>"><?php echo HTML::image('img/kasvumaja_logo.gif', 'Kasvumaja', array('id' => 'logo')) ?></a>
-      <?php //echo HTML::image('img/tomat.jpg', 'Kasvumaja', array('class' => 'pull-right')) ?>
   </div>
 
     <div class="navbar-custom">
@@ -37,7 +36,7 @@
 
     <div class="container">
         <ul class="pull-left list-inline">
-            <li><a href="/et">Eesti <?php echo HTML::image('img/flag_et.jpg')?></a></li>
+            <li><a href="/">Eesti <?php echo HTML::image('img/flag_et.jpg')?></a></li>
             <li><a href="/ru">Русский <?php echo HTML::image('img/flag_ru.jpg')?></a></li>
         </ul>
         <address class="pull-right text-right">
@@ -53,7 +52,6 @@
     </div>
 
     <div id="footer">
-
           <ul>
             <li class="text-left">
                 <address>
@@ -93,13 +91,11 @@
                 <?php } ?>
             </li>
           </ul>
-
     </div>
     
     <?php echo HTML::script('js/jquery_1.11.0.min.js'); ?>
     <?php echo HTML::script('packages/jquery.fs.boxer/jquery.fs.boxer.min.js'); ?>
     <?php echo HTML::script('js/main.js'); ?>
-    <?php //echo HTML::script('js/bootstrap.min.js'); ?>
   </body>
 </html>
 
@@ -109,6 +105,8 @@
             return 'class="active"';
     }
     function get_nav_url($lang, $path=null) {
+        if ($lang == 'et' && $path == null)
+            return '/';
         return '/' . $lang . $path;
     }
 ?>
