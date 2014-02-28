@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="<?php echo $description ?>" />
     <meta name="keywords" content="<?php echo $keywords ?>" />
+    <meta name="google-site-verification" content="dLvOCCeAg16bxIX_KLPJXzPBjdasQPUIlHb-dQIZN6c" />
     <title><?php echo $title ?></title>
 
     <!-- Bootstrap -->
