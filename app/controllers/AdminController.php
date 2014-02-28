@@ -69,7 +69,7 @@ class AdminController extends BaseController {
 
         $page->lang = Input::get('lang');
         $page->title = htmlspecialchars(Input::get('title'));
-        $page->h1 = Input::get('h1');
+        $page->h1 = htmlspecialchars(Input::get('h1'));
         $page->content = Input::get('content');
         $page->description = Input::get('description');
         $page->show_on_cover = Input::get('show_on_cover');

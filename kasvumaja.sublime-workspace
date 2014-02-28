@@ -116,6 +116,8 @@
 	},
 	"file_history":
 	[
+		"/D/Dev/kasvumaja/public/js/main.js",
+		"/D/Dev/kasvumaja/app/controllers/AdminController.php",
 		"/D/Dev/kasvumaja/app/views/layouts/master.php",
 		"/D/Dev/kasvumaja/app/views/pages/contact.php",
 		"/D/Dev/kasvumaja/public/css/style.css",
@@ -126,7 +128,6 @@
 		"/D/Dev/kasvumaja/public/js/admin.js",
 		"/D/Dev/kasvumaja/app/views/admin/page-edit.php",
 		"/D/Dev/kasvumaja/app/views/layouts/admin.php",
-		"/D/Dev/kasvumaja/public/js/main.js",
 		"/D/Dev/kasvumaja/app/views/pages/detail.php",
 		"/D/Dev/kasvumaja/app/views/pages/list.php",
 		"/D/Dev/kasvumaja/app/config/mail.php",
@@ -135,7 +136,6 @@
 		"/D/Dev/kasvumaja/app/routes.php",
 		"/D/Dev/kasvumaja/app/filters.php",
 		"/D/Dev/kasvumaja/app/views/pages/index.php",
-		"/D/Dev/kasvumaja/app/controllers/AdminController.php",
 		"/D/Dev/kasvumaja/vendor/autoload.php",
 		"/D/Dev/kasvumaja/app/lang/ru/menu.php",
 		"/D/Dev/kasvumaja/app/lang/et/menu.php",
