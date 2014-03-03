@@ -18,6 +18,7 @@ class CreatePagesTable extends Migration {
 			$table->integer('type');
 			$table->string('lang', 2);
             $table->string('title');
+            $table->string('meta_description');
             $table->string('h1');
             $table->longText('content');
             $table->text('description');

@@ -6,6 +6,7 @@
     <meta name="description" content="<?php echo $description ?>" />
     <meta name="keywords" content="<?php echo $keywords ?>" />
     <meta name="google-site-verification" content="dLvOCCeAg16bxIX_KLPJXzPBjdasQPUIlHb-dQIZN6c" />
+    <meta name='yandex-verification' content='7eecfc0fa0bb4463' />
     <title><?php echo $title ?></title>
 
     <!-- Bootstrap -->

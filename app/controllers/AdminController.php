@@ -69,6 +69,7 @@ class AdminController extends BaseController {
 
         $page->lang = Input::get('lang');
         $page->title = htmlspecialchars(Input::get('title'));
+        $page->meta_description = htmlspecialchars(Input::get('meta_description'));
         $page->h1 = htmlspecialchars(Input::get('h1'));
         $page->content = Input::get('content');
         $page->description = Input::get('description');

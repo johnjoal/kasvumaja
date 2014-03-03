@@ -5,9 +5,16 @@
     <div class="form-group">
         <div class="input-group">
             <span class="input-group-addon">Title</span>
-            <input type="text" class="form-control" id="title" name="title" placeholder="Title" value="<?php echo $page->title ?>">
+            <input type="text" class="form-control" name="title" placeholder="Title" value="<?php echo $page->title ?>">
         </div>
     </div>
+    <div class="form-group">
+        <div class="input-group">
+            <span class="input-group-addon">Meta-Description</span>
+            <input type="text" class="form-control" name="meta_description" placeholder="meta-description" value="<?php echo $page->meta_description ?>">
+        </div>
+    </div>
+    <br><br>
     <div class="form-group">
         <div class="input-group">
             <span class="input-group-addon">H1</span>
