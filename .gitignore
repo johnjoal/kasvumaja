@@ -8,3 +8,5 @@ composer.lock
 Thumbs.db
 .sublime-project
 .sublime-workspace
+/app/config/app.php
+/app/config/database.php
