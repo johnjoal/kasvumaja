@@ -59,7 +59,7 @@
                 <address>
                 <strong>Prime Line OÜ</strong><br>
                 Reg nr. 12430378<br>
-                KMKR nr. EE10169921<br>
+                KMKR nr. EE101693921<br>
                 Katusepapi 14, 11412 Tallinn
                 </address>
             </li>

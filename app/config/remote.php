@@ -29,12 +29,12 @@ return array(
 	'connections' => array(
 
 		'production' => array(
-			'host'      => '38307',
+			'host'      => '',
 			'username'  => '',
 			'password'  => '',
-			'key'       => 'id_dsa.ppk',
-			'keyphrase' => 'akKmfnek203dKls',
-			'root'      => 'public_html/kasvumaja.ee',
+			'key'       => '',
+			'keyphrase' => '',
+			'root'      => '',
 		),
 
 	),

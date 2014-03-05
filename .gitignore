@@ -10,3 +10,5 @@ Thumbs.db
 .sublime-workspace
 /app/config/app.php
 /app/config/database.php
+/app/config/mail.php
+/public/uploads
