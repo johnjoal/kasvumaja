@@ -5,6 +5,7 @@ return array(
 	'mail-name' => 'Nimi',
 	'mail-email' => 'Email',
 	'mail-phone' => 'Telefoni nr.',
+	'mail-source' => 'Kuidas meid leidsite',
 	'mail-subject' => 'Pealkiri',
 	'mail-content' => 'Kommentaar',
 	'mail-send' => 'Saada',

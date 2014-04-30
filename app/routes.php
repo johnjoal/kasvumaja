@@ -32,7 +32,7 @@ Route::get('/logout', function()
 Route::controller('admin', 'AdminController');
 /*** END ADMIN MODE ***/
 
-$languages = array('ru','et');
+$languages = array('ru','et','fi');
 $locale = Request::segment(1);
 if(in_array($locale, $languages))
 	App::setLocale($locale);

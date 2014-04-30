@@ -5,6 +5,7 @@ return array(
 	'mail-name' => 'Имя',
 	'mail-email' => 'Email',
 	'mail-phone' => 'Телефон',
+	'mail-source' => 'Как нас нашли',
 	'mail-subject' => 'Тема сообщения',
 	'mail-content' => 'Текст сообщения',
 	'mail-send' => 'Отправить',

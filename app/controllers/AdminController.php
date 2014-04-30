@@ -124,14 +124,16 @@ class AdminController extends BaseController {
 	public function postInternal() {
 	    $data = array(
 	        'et' => array(
-	            //'title' => htmlspecialchars(Input::get('et-title')),
 	            'description' => htmlspecialchars(Input::get('et-description')),
 	            'keywords' => htmlspecialchars(Input::get('et-keywords'))
 	        ),
 	        'ru' => array(
-	            //'title' => htmlspecialchars(Input::get('ru-title')),
 	            'description' => htmlspecialchars(Input::get('ru-description')),
 	            'keywords' => htmlspecialchars(Input::get('ru-keywords'))
+	        ),
+	        'fi' => array(
+	            'description' => htmlspecialchars(Input::get('fi-description')),
+	            'keywords' => htmlspecialchars(Input::get('fi-keywords'))
 	        )
 	    );
 	    Cache::forever('internal', $data);

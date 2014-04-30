@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"print",
+				"print_r"
+			],
+			[
 				"pa",
 				"padding"
 			],
@@ -87,14 +91,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "/D/Dev/plazaestate/www/app/start/global.php",
-			"settings":
-			{
-				"buffer_size": 2542,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -124,25 +120,37 @@
 	},
 	"file_history":
 	[
+		"/D/Dev/kasvumaja/app/start/global.php",
+		"/D/Dev/kasvumaja/app/routes.php",
+		"/D/Dev/temp/kasv/app/routes.php",
+		"/D/Dev/kasvumaja/app/views/pages/contact.php",
+		"/D/Dev/kasvumaja/app/views/layouts/master.php",
+		"/D/Dev/kasvumaja/app/views/emails/contact.php",
+		"/D/Dev/kasvumaja/app/views/admin/page-edit.php",
+		"/D/Dev/kasvumaja/app/views/admin/internal.php",
+		"/D/Dev/kasvumaja/app/lang/et/strings.php",
+		"/D/Dev/kasvumaja/app/lang/ru/strings.php",
+		"/D/Dev/kasvumaja/app/lang/fi/strings.php",
+		"/D/Dev/kasvumaja/app/controllers/PageController.php",
+		"/D/Dev/kasvumaja/app/controllers/AdminController.php",
+		"/D/Dev/kasvumaja/app/views/admin/pages.php",
+		"/D/Dev/temp/kasv/app/controllers/AdminController.php",
+		"/D/Dev/kasvumaja/app/database/seeds/UserTableSeeder.php",
+		"/D/Dev/kasvumaja/app/config/app.php",
+		"/D/Dev/kasvumaja/app/lang/fi/menu.php",
+		"/D/Dev/kasvumaja/app/database/seeds/PageTableSeeder.php",
+		"/D/Dev/plazaestate/www/app/start/global.php",
+		"/D/Dev/kasvumaja/app/database/migrations/2014_02_27_143833_create_pages_table.php",
 		"/D/Dev/plazaestate/www/bootstrap/autoload.php",
 		"/D/Dev/kasvumaja/public/js/main.js",
-		"/D/Dev/kasvumaja/app/controllers/AdminController.php",
-		"/D/Dev/kasvumaja/app/views/layouts/master.php",
-		"/D/Dev/kasvumaja/app/views/pages/contact.php",
 		"/D/Dev/kasvumaja/public/css/style.css",
 		"/D/Dev/kasvumaja/public/css/bootstrap.css",
 		"/D/Dev/kasvumaja/public/css/bootstrap-custom.css",
-		"/D/Dev/kasvumaja/app/views/emails/contact.php",
-		"/D/Dev/kasvumaja/app/controllers/PageController.php",
 		"/D/Dev/kasvumaja/public/js/admin.js",
-		"/D/Dev/kasvumaja/app/views/admin/page-edit.php",
 		"/D/Dev/kasvumaja/app/views/layouts/admin.php",
 		"/D/Dev/kasvumaja/app/views/pages/detail.php",
 		"/D/Dev/kasvumaja/app/views/pages/list.php",
 		"/D/Dev/kasvumaja/app/config/mail.php",
-		"/D/Dev/kasvumaja/app/lang/et/strings.php",
-		"/D/Dev/kasvumaja/app/lang/ru/strings.php",
-		"/D/Dev/kasvumaja/app/routes.php",
 		"/D/Dev/kasvumaja/app/filters.php",
 		"/D/Dev/kasvumaja/app/views/pages/index.php",
 		"/D/Dev/kasvumaja/vendor/autoload.php",
@@ -156,7 +164,6 @@
 		"/D/Dev/kasvumaja/.gitignore",
 		"/D/Dev/kasvumaja/kasvumaja.sublime-project",
 		"/D/Dev/kasvumaja/app/config/compile.php",
-		"/D/Dev/kasvumaja/app/start/global.php",
 		"/D/Dev/kasvumaja/app/start/local.php",
 		"/D/Dev/kasvumaja/app/config/c9/database.php",
 		"/D/Dev/kasvumaja/app/config/auth.php",
@@ -203,6 +210,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"            '",
 			"min-width",
 			"media",
 			":\n",
@@ -240,37 +248,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "/D/Dev/plazaestate/www/app/start/global.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2542,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": -0.0,
-						"translation.y": 315.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],

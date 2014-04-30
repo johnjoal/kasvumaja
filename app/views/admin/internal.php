@@ -26,6 +26,21 @@
             <input type="text" class="form-control" name="ru-keywords" placeholder="Keywords" value="<?php echo $data['ru']['keywords'] ?>">
         </div>
     </div>
+
+    <label>Soome</label>
+    <div class="form-group">
+        <div class="input-group">
+            <span class="input-group-addon">Description</span>
+            <input type="text" class="form-control" name="fi-description" placeholder="Description" value="<?php echo $data['fi']['description'] ?>">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <span class="input-group-addon">Keywords</span>
+            <input type="text" class="form-control" name="fi-keywords" placeholder="Keywords" value="<?php echo $data['fi']['keywords'] ?>">
+        </div>
+    </div>
+
     <div class="form-group">
         <button type="submit" class="btn btn-primary">Сохранить</button>
     </div>

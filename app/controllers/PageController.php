@@ -26,14 +26,14 @@ class PageController extends BaseController {
     	        'page' => Page::where('type', PageType::HOME)
     	            ->where('lang', App::getLocale())
     	            ->first(),
-    	        'products' => Page::select('id','h1','description')
+    	        'products' => Page::select('id','h1','description','meta_description')
     	        	->where('lang', App::getLocale())
     	            ->where('show_on_cover', true)
     	            ->get()
     	        );
         });
         
-        $this->setLayout(View::make('pages.index')->with('data', $data), PageType::HOME, $data['page']->title);
+        $this->setLayout(View::make('pages.index')->with('data', $data), PageType::HOME, $data['page']->title, $data['page']->meta_description);
 	}
     
     public function getProducts()
@@ -72,7 +72,7 @@ class PageController extends BaseController {
 	    $data = array(
 	        'page' => Page::find($id)
 	        );
-		$this->setLayout(View::make('pages.detail')->with('data', $data), $data['page']->type, $data['page']->title);
+		$this->setLayout(View::make('pages.detail')->with('data', $data), $data['page']->type, $data['page']->title, $data['page']->meta_description);
 	}
 
 	public function postSendMail()
@@ -82,6 +82,7 @@ class PageController extends BaseController {
 			'name' => Input::get('name'),
 			'email' => Input::get('email'),
 			'phone' => Input::get('phone'),
+			'source' => Input::get('source'),
 			'subject' => Input::get('subject'),
 			'content' => Input::get('content'),
 			);
@@ -106,17 +107,20 @@ class PageController extends BaseController {
 		$this->setLayout(View::make('pages.list')->with('data', $data), $page_type, $title);
     }
 
-    private function setLayout($content, $page_type, $title='') {
-    	$this->setMeta();
+    private function setLayout($content, $page_type, $title='', $meta_description='') {
+    	$this->setMeta($meta_description);
     	$this->layout->title = $title;
     	$this->layout->page_type = $page_type;
     	$this->layout->lang = App::getLocale();
     	$this->layout->content = $content;
     }
     
-    private function setMeta() {
+    private function setMeta($meta_description) {
         $internal = Cache::get('internal');
         $this->layout->keywords = $internal[App::getLocale()]['keywords'];
-        $this->layout->description = $internal[App::getLocale()]['description'];
+        if ($meta_description != '')
+        	$this->layout->description = $meta_description;
+        else
+	        $this->layout->description = $internal[App::getLocale()]['description'];
     }
 }

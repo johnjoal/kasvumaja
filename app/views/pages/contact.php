@@ -40,6 +40,13 @@
 	  		</div>
 
 	  		<div class="form-group">
+		    	<label for="source" class="col-xs-2 control-label"><?php echo trans('strings.mail-source') ?></label>
+		    	<div class="col-xs-5">
+		      		<input type="text" class="form-control" id="source" name="source" placeholder="<?php echo trans('strings.mail-source') ?>">
+		      	</div>
+	  		</div>
+
+	  		<div class="form-group">
 		    	<label for="subject" class="col-xs-2 control-label"><?php echo trans('strings.mail-subject') ?></label>
 		    	<div class="col-xs-5">
 		      		<input type="text" class="form-control" id="subject" name="subject" placeholder="<?php echo trans('strings.mail-subject') ?>">

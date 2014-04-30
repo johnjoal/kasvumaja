@@ -40,6 +40,7 @@
         <ul class="pull-left list-inline">
             <li><a href="/">Eesti <?php echo HTML::image('img/flag_et.jpg')?></a></li>
             <li><a href="/ru">Русский <?php echo HTML::image('img/flag_ru.jpg')?></a></li>
+            <li><a href="/fi">Soome <?php echo HTML::image('img/flag_fi.jpg')?></a></li>
         </ul>
         <address class="pull-right text-right">
             (+372) 5915 1801 <?php echo HTML::image('img/flag_et.jpg')?><br>
